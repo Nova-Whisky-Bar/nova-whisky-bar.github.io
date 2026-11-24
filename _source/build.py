@@ -10,8 +10,8 @@ import json, re, os, html, shutil
 BASE = "https://nova-whisky-bar.github.io/"
 HIDE_TODO = True   # True：未填資料直接不顯示（正式上線用）；False：顯示紅色【待填】（預覽用）
 IG = "https://www.instagram.com/novawhisky/"
-FB = None        # 例："https://www.facebook.com/xxxx/"
-THREADS = None   # 例："https://www.threads.net/@xxxx"
+FB = "https://www.facebook.com/novawhiskybar"
+THREADS = "https://www.threads.com/@novawhisky"
 TEL = "+886-7-330-8050"
 TEL_DISPLAY = "(07) 330-8050"
 MAP = "https://www.google.com/maps/search/?api=1&query=" + "Nova%20Whisky%20Bar%20%E6%96%B0%E6%98%9F%E5%A8%81%E5%A3%AB%E5%BF%8C%E9%85%92%E9%A4%A8"
