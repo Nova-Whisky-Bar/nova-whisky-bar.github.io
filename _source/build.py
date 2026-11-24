@@ -124,8 +124,6 @@ L["zh"] = dict(
         ("Nova Whisky Bar 新星威士忌酒館", "苓雅區的威士忌酒吧，也就是這裡。"),
         ("南曜蒸餾所 NOVA Distillery", "醉俠團隊在高雄建置中的精釀蒸餾所，從糖化、發酵到蒸餾都由團隊親手操作。"),
     ],
-    news_h="近期活動",
-    news=[("2026-12-05", "Whisky Fest Takao 2026 於 12 月 5–6 日在高雄舉行，醉俠團隊會在現場。")],
     journal_k="Journal", journal_h="文章", journal_more="看全部文章",
     warn_extra="",
     age_q="您是否已年滿 18 歲？", age_yes="是，我已滿 18 歲", age_no="否，離開",
@@ -184,8 +182,6 @@ L["en"] = dict(
         ("Nova Whisky Bar (新星威士忌酒館)", "Our whisky bar in Lingya District — you're here."),
         ("NOVA Distillery (南曜蒸餾所)", "The team's craft distillery under construction in Kaohsiung, run hands-on from mashing to distillation."),
     ],
-    news_h="Coming up",
-    news=[("2026-12-05", "Whisky Fest Takao 2026 runs 5–6 December in Kaohsiung. The Drunken Master team will be there.")],
     journal_k=None, journal_h=None, journal_more=None,
     warn_extra="Please drink responsibly. No drink driving. Over 18s only.",
     age_q="Are you 18 or older?", age_yes="Yes, I am 18+", age_no="No, leave",
@@ -244,8 +240,6 @@ L["ja"] = dict(
         ("Nova Whisky Bar 新星威士忌酒館", "苓雅区のウイスキーバー。このお店です。"),
         ("南曜蒸餾所 NOVA Distillery", "チームが高雄で建設中のクラフト蒸溜所。糖化から蒸溜まで自分たちの手で行います。"),
     ],
-    news_h="イベント情報",
-    news=[("2026-12-05", "Whisky Fest Takao 2026 が12月5〜6日に高雄で開催されます。醉俠チームも会場にいます。")],
     journal_k=None, journal_h=None, journal_more=None,
     warn_extra="20歳未満の飲酒は日本の法律で禁止されています。台湾では18歳未満の飲酒は禁止です。飲酒運転は絶対にやめましょう。",
     age_q="18歳以上ですか？", age_yes="はい、18歳以上です", age_no="いいえ、退出します",
@@ -304,8 +298,6 @@ L["ko"] = dict(
         ("Nova Whisky Bar 新星威士忌酒館", "링야구의 위스키 바, 바로 이곳입니다."),
         ("南曜蒸餾所 NOVA Distillery", "팀이 가오슝에 짓고 있는 크래프트 증류소. 당화부터 증류까지 직접 운영합니다."),
     ],
-    news_h="다가오는 행사",
-    news=[("2026-12-05", "Whisky Fest Takao 2026이 12월 5~6일 가오슝에서 열립니다. 醉俠 팀도 현장에 있습니다.")],
     journal_k=None, journal_h=None, journal_more=None,
     warn_extra="대만에서는 만 18세 미만 음주가 금지되어 있습니다. 음주운전은 절대 하지 마세요.",
     age_q="만 18세 이상이신가요?", age_yes="네, 18세 이상입니다", age_no="아니요, 나가기",
@@ -392,6 +384,85 @@ ARTICLES = [
          title="一篇看懂橡木桶如何改變威士忌",
          summary="美洲橡木、歐洲橡木、風乾與烘烤，如何一路影響杯中的風味。新手友善的入門指南。"),
 ]
+
+
+# 品酒會：活動結束後把 "past" 改成 True，或整筆移到過往活動
+LINEUP = [
+    ("unpeated", "Bruichladdich 12 Aged Years", "46%", None),
+    ("unpeated", "Bruichladdich 15 Aged Years", "46%", None),
+    ("unpeated", "Bruichladdich 18 Aged Years", "50%", None),
+    ("heavy", "Port Charlotte PC5 Redux", "63.5%", "40 PPM"),
+    ("super", "Octomore 17.1", "59.7%", "81.0 PPM"),
+    ("super", "Octomore 17.2", "59.5%", "81.0 PPM"),
+    ("super", "Octomore 17.3", "60.9%", "132.1 PPM"),
+    ("super", "Octomore OBA Redux", "54.2%", "undisclosed"),
+]
+EVENTS = [dict(
+    id="bruichladdich-20261215", start="2026-12-15T19:30:00+08:00", end="2026-12-15T21:30:00+08:00", door="19:20",
+    price=1000, seats=22, img="event-20261215",
+    groups={
+        "zh": {"unpeated": "無泥煤｜Bruichladdich", "heavy": "重泥煤｜Port Charlotte", "super": "超重泥煤｜Octomore", "undisclosed": "PPM 未公開"},
+        "en": {"unpeated": "Unpeated | Bruichladdich", "heavy": "Heavily peated | Port Charlotte", "super": "Super-heavily peated | Octomore", "undisclosed": "PPM undisclosed"},
+        "ja": {"unpeated": "ノンピート｜Bruichladdich", "heavy": "ヘビーピート｜Port Charlotte", "super": "スーパーヘビーピート｜Octomore", "undisclosed": "PPM非公開"},
+        "ko": {"unpeated": "논피트｜Bruichladdich", "heavy": "헤비 피트｜Port Charlotte", "super": "슈퍼 헤비 피트｜Octomore", "undisclosed": "PPM 비공개"},
+    },
+    text={
+        "zh": dict(title="零到一百三十二｜布萊迪的泥煤光譜",
+            lede="一間酒廠、三種個性：清新帶麥芽與果香的無泥煤 Bruichladdich、煙燻與果香交織的重泥煤 Port Charlotte，以及以超重泥煤和實驗精神聞名的 Octomore。這次邀請人頭馬君度品牌大使 James，從布萊迪 12、15、18 年一路喝到 132.1 PPM 的 Octomore 17.3，八款酒走完布萊迪的泥煤光譜；其中包括酒廠復廠 25 週年在 Fèis Ìle 艾雷島節推出的 PC5 Redux，以及重新詮釋 Octomore Black Art 的 OBA Redux。",
+            info=[("日期", "2026／12／15（二）"), ("時間", "19:30–21:30（19:20 開放進場）"), ("主講", "人頭馬君度品牌大使 James"), ("名額", "22 名"), ("費用", "NT$1,000／人"), ("報名", "私訊 Nova Whisky Bar（Instagram 或 Facebook）")],
+            lineup_h="品飲酒款", alt="零到一百三十二：布萊迪的泥煤光譜品酒會主視覺，八支酒款由無泥煤排到 132.1 PPM", book="私訊報名"),
+        "en": dict(title="From Zero to 132 | The Peat Spectrum of Bruichladdich",
+            lede="One distillery, three personalities: the fresh, unpeated Bruichladdich, full of malt and fruit; the heavily peated Port Charlotte, where smoke and fruit intertwine; and Octomore, famed for super-heavy peat and experimental spirit. James, brand ambassador for Rémy Cointreau, guides us through eight whiskies, from Bruichladdich 12, 15 and 18 all the way to Octomore 17.3 at 132.1 PPM, including PC5 Redux, released at Fèis Ìle for the 25th anniversary of the distillery's reopening, and OBA Redux, a new take on Octomore Black Art.",
+            info=[("Date", "Tue, 15 December 2026"), ("Time", "19:30–21:30 (doors 19:20)"), ("Host", "James, Rémy Cointreau brand ambassador"), ("Seats", "22"), ("Fee", "NT$1,000 per person"), ("Booking", "DM Nova Whisky Bar on Instagram or Facebook")],
+            lineup_h="Line-up", alt="Key visual for From Zero to 132, a Bruichladdich tasting at Nova Whisky Bar, with eight bottles arranged from unpeated to 132.1 PPM", book="Book by DM"),
+        "ja": dict(title="ゼロから132へ｜Bruichladdichのピート・スペクトラム",
+            lede="ひとつの蒸溜所に三つの個性。モルトとフルーツが広がるノンピートのBruichladdich、スモーキーさと果実味が絡み合うヘビーピートのPort Charlotte、そしてスーパーヘビーピートと実験精神で知られるOctomore。Rémy CointreauブランドアンバサダーのJamesと一緒に、Bruichladdich 12年・15年・18年から132.1 PPMのOctomore 17.3まで、8種類を飲み進めます。再稼働25周年にFèis Ìleで発表されたPC5 Redux、Octomore Black Artを新たに解釈したOBA Reduxも登場します。",
+            info=[("日時", "2026年12月15日（火）"), ("時間", "19:30–21:30（19:20開場）"), ("講師", "Rémy Cointreau ブランドアンバサダー James"), ("定員", "22名"), ("参加費", "NT$1,000／1名"), ("お申し込み", "Nova Whisky Bar の Instagram または Facebook へDM")],
+            lineup_h="テイスティング・ラインナップ", alt="Nova Whisky Bar のBruichladdichテイスティング会「ゼロから132へ」のキービジュアル。ノンピートから132.1 PPMまで8本が並ぶ", book="DMで申し込む"),
+        "ko": dict(title="0에서 132까지｜Bruichladdich 피트 스펙트럼",
+            lede="한 증류소, 세 가지 개성. 몰트와 과일 향이 어우러진 산뜻한 논피트 Bruichladdich, 스모키함과 과실미가 얽힌 헤비 피트 Port Charlotte, 그리고 슈퍼 헤비 피트와 실험 정신으로 이름난 Octomore. Rémy Cointreau 브랜드 앰배서더 James와 함께 Bruichladdich 12년, 15년, 18년부터 132.1 PPM의 Octomore 17.3까지 여덟 가지를 맛봅니다. 재가동 25주년을 맞아 Fèis Ìle에서 공개된 PC5 Redux와 Octomore Black Art를 새롭게 해석한 OBA Redux도 포함됩니다.",
+            info=[("일시", "2026년 12월 15일 (화)"), ("시간", "19:30–21:30 (19:20 입장)"), ("진행", "Rémy Cointreau 브랜드 앰배서더 James"), ("정원", "22명"), ("참가비", "NT$1,000 / 1인"), ("신청", "Nova Whisky Bar Instagram 또는 Facebook DM")],
+            lineup_h="테이스팅 라인업", alt="Nova Whisky Bar Bruichladdich 테이스팅 「0에서 132까지」 키 비주얼. 논피트부터 132.1 PPM까지 여덟 병이 놓여 있다", book="DM으로 신청"),
+    },
+)]
+
+def event_html(lang):
+    out = ""
+    for e in EVENTS:
+        t = e["text"][lang]; g = e["groups"][lang]
+        info = "".join(f"<div><dt>{k}</dt><dd>{v}</dd></div>" for k, v in t["info"])
+        rows, cur = "", None
+        for grp, name, abv, ppm in LINEUP:
+            if grp != cur:
+                if cur: rows += "</ol>"
+                rows += f'<p class="lg">{g[grp]}</p><ol>'
+                cur = grp
+            p = g["undisclosed"] if ppm == "undisclosed" else ppm
+            sep = ("｜" + p) if p else ""
+            rows += f'<li><span>{name}</span><span class="meta2">{abv}{sep}</span></li>'
+        rows += "</ol>"
+        img = e["img"]
+        out += f"""<article class="event" id="{e['id']}"><picture><source type="image/webp" srcset="{BASE}assets/{img}-900.webp 900w, {BASE}assets/{img}-1600.webp 1600w" sizes="(max-width:900px) 92vw, 700px"><img src="{BASE}assets/{img}-1600.jpg" srcset="{BASE}assets/{img}-900.jpg 900w, {BASE}assets/{img}-1600.jpg 1600w" sizes="(max-width:900px) 92vw, 700px" width="1600" height="837" alt="{html.escape(t['alt'])}" loading="lazy"></picture>
+<div class="ev-body"><h3>{t['title']}</h3><p>{t['lede']}</p><dl class="info">{info}</dl>
+<p class="lineup-h">{t['lineup_h']}</p><div class="lineup">{rows}</div>
+<p class="btns"><a class="btn" href="{IG}">{t['book']}・Instagram</a><a class="btn ghost" href="{FB}">Facebook</a></p></div></article>"""
+    return out
+
+def event_schema(lang, page_url):
+    res = []
+    for e in EVENTS:
+        t = e["text"][lang]
+        res.append({"@type": "Event", "@id": BASE + "#" + e["id"], "name": strip(t["title"]), "description": strip(t["lede"]),
+            "startDate": e["start"], "endDate": e["end"], "doorTime": e["door"],
+            "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+            "location": {"@type": "BarOrPub", "@id": BASE + "#bar", "name": "Nova Whisky Bar 新星威士忌酒館",
+                         "address": {"@type": "PostalAddress", "streetAddress": "林森二路128巷14號2樓", "addressLocality": "苓雅區", "addressRegion": "高雄市", "postalCode": "802", "addressCountry": "TW"}},
+            "image": [BASE + "assets/" + e["img"] + "-1600.jpg"],
+            "organizer": {"@type": "Organization", "name": "Nova Whisky Bar 新星威士忌酒館", "url": BASE},
+            "performer": {"@type": "Person", "name": "James"},
+            "maximumAttendeeCapacity": e["seats"], "inLanguage": L[lang]["html_lang"],
+            "offers": {"@type": "Offer", "price": e["price"], "priceCurrency": "TWD", "availability": "https://schema.org/InStock", "url": page_url + "#" + e["id"]}})
+    return res
 
 # ---------------------------------------------------------------
 LANGS = ["zh", "en", "ja", "ko"]
@@ -555,6 +626,7 @@ def home(lang):
     graph = [bar_schema(lang), {"@type": "WebSite", "@id": BASE + "#site", "url": BASE, "name": "Nova Whisky Bar 新星威士忌酒館", "inLanguage": d["html_lang"]}]
     if lang != "zh":
         graph.append(faq_schema(lang, page))
+    graph += event_schema(lang, page)
     about = "".join((f'<p class="beat">{p}</p>' if i == 1 else f"<p>{p}</p>") for i, p in enumerate(d["about"]))
     facts = "".join(f'<div><p class="k2">{a}</p><p class="fv">{b}</p></div>' for a, b in d["facts"])
     about_inner = f'<blockquote>「{d["quote"]}」</blockquote>{about}<div class="facts">{facts}</div>'
@@ -562,7 +634,6 @@ def home(lang):
     visit = "".join(f"<div><dt>{k}</dt><dd>{fill(v, lang)}</dd></div>" for k, v in d["visit"] if strip(fill(v, lang)))
     soc = "".join(f'<a class="btn ghost" href="{u}">{n}</a>' for n, u in socials())
     family = "".join(f'<li><strong>{t}</strong><span>{p}</span></li>' for t, p in d["family"])
-    news = "".join(f'<li><time datetime="{dt}">{dt}</time><span>{t}</span></li>' for dt, t in d["news"])
     side = "".join(f"<p>{s}</p>" for s in d["side"])
     if lang == "zh":
         faq_inner = faq_html(lang, 6) + f'<p><a class="more" href="faq/">{d["faq_more"]} →</a></p>'
@@ -584,7 +655,7 @@ def home(lang):
 </div></section>
 {sect("about", d["about_k"], d["about_h"], about_inner)}
 <section id="drink" class="band alt"><div class="wrap"><div class="sh row"><p class="k">{d['drink_k']}</p><h2>{d['drink_h']}</h2></div><div class="grid3">{drink}</div></div></section>
-{sect("tastings", d["events_k"], d["events_h"], f'<p>{d["events"]}</p><ul class="news">{news}</ul>')}
+{sect("tastings", d["events_k"], d["events_h"], f'<p>{d["events"]}</p>' + event_html(lang))}
 {sect("visit", d["visit_k"], d["visit_h"], f'<dl class="info">{visit}</dl><p class="note">{d["visit_note"]}</p><p class="btns"><a class="btn" href="{MAP}">{d["btn_map"]}</a>{soc}</p>', alt=True)}
 {sect("faq", d["faq_k"], d["faq_h"], faq_inner)}
 {sect("family", d["family_k"], d["family_h"], f'<ul class="list">{family}</ul>', alt=True)}
@@ -695,6 +766,9 @@ def llms():
 ## 官方社群
 {soc}
 
+## 近期品酒會
+- 2026/12/15（二）19:30–21:30「零到一百三十二｜布萊迪的泥煤光譜」：人頭馬君度品牌大使 James 主講，八款 Bruichladdich／Port Charlotte／Octomore（含 PC5 Redux、Octomore 17.1／17.2／17.3、OBA Redux），名額 22 名，NT$1,000／人，私訊 Nova Whisky Bar 報名。
+
 ## 適合誰
 - 想喝蘇格蘭單一麥芽、獨立裝瓶、單桶威士忌的人
 - 想一個人安靜喝酒，或兩三人輕聲聊天的人
@@ -782,6 +856,11 @@ summary:hover .qt{color:var(--whisky)}details p{margin:0 0 20px;padding-left:34p
 .list strong,.list a{display:block;font-family:var(--serif);font-weight:500}.list span{color:var(--stone);font-size:15px}
 .news{list-style:none;padding:0;margin:20px 0 0}.news li{display:flex;gap:16px;padding:12px 0;border-top:1px solid var(--line)}.news time{color:var(--whisky);font-size:13px;flex:none;padding-top:2px}
 .more{display:inline-block;margin-top:18px}
+.event{border:1px solid var(--line);background:var(--paper);margin-top:26px}.event img{display:block;width:100%;height:auto;aspect-ratio:1600/837;background:#1a1714}
+.ev-body{padding:26px 28px 28px}.ev-body h3{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:.03em;margin:0 0 12px;line-height:1.45}.ev-body>p{margin:0 0 18px}
+.lineup-h{font-family:var(--display);font-style:italic;color:var(--whisky);font-size:17px;margin:24px 0 6px}.lg{margin:14px 0 4px;font-size:13px;color:var(--stone);letter-spacing:.04em}
+.lineup ol{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}.lineup li{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
+.meta2{color:var(--stone);white-space:nowrap}.ev-body .btns{margin-top:22px}
 h1.page{font-family:var(--serif);font-size:clamp(30px,4.6vw,44px);letter-spacing:.04em;margin:10px 0 6px}
 .todo{background:#FBE3E0;color:#8A1F17;border:1px dashed #C8483D;padding:0 6px;border-radius:2px;font-size:.92em;font-weight:400}
 .foot{border-top:1px solid var(--line);padding:40px 0 56px;font-size:13px;color:var(--stone)}
@@ -795,7 +874,7 @@ h1.page{font-family:var(--serif);font-size:clamp(30px,4.6vw,44px);letter-spacing
 @media (max-width:900px){.hero-mark{width:84px}.mast{grid-template-columns:1fr;gap:28px;padding:40px 0 34px}.mast-r{align-items:flex-start;text-align:left}
 .split{grid-template-columns:1fr;gap:22px}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
 .grid3 article:nth-child(3n){border-right:1px solid var(--line)}.grid3 article:nth-child(2n){border-right:0}.grid3 article:nth-last-child(-n+3){border-bottom:1px solid var(--line)}.grid3 article:nth-last-child(-n+2){border-bottom:0}}
-@media (max-width:600px){.hero-mark{display:none}.nav{order:3;flex-basis:100%;justify-content:flex-start;gap:2px 18px}.langs{order:2}
+@media (max-width:600px){.ev-body{padding:20px 18px 22px}.hero-mark{display:none}.nav{order:3;flex-basis:100%;justify-content:flex-start;gap:2px 18px}.langs{order:2}
 .grid3{grid-template-columns:1fr}.grid3 article{border-right:0!important;border-bottom:1px solid var(--line)!important}.grid3 article:last-child{border-bottom:0!important}
 .facts{grid-template-columns:1fr}.info>div{grid-template-columns:1fr;gap:2px}details p{padding-left:0}.plate svg{aspect-ratio:4/3}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
