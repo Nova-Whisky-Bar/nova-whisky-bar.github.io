@@ -408,7 +408,7 @@ def bar_schema(lang):
         "@type": "BarOrPub", "@id": BASE + "#bar",
         "name": "Nova Whisky Bar",
         "alternateName": ["新星威士忌酒館", "Nova Whisky Bar 新星威士忌酒館", "高雄高地人小酒館", "Highlander Inn Takao"],
-        "description": d["desc"], "url": url_of(lang), "image": OG_IMG,
+        "description": d["desc"], "url": url_of(lang), "image": OG_IMG, "logo": BASE + "assets/logo-512.png",
         "telephone": TEL, "address": addr, "hasMap": MAP,
         "openingHoursSpecification": [
             {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "20:00", "closes": "01:30"},
@@ -459,6 +459,8 @@ def head(lang, title, desc, canonical, schema_graph, alternates=True, noindex=Fa
 <meta name="twitter:description" content="{html.escape(desc)}">
 <meta name="twitter:image" content="{OG_IMG}">
 <link rel="icon" href="{BASE}assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="{BASE}assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="{BASE}assets/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?{d['fonts']}&display=swap">
@@ -471,7 +473,7 @@ def head(lang, title, desc, canonical, schema_graph, alternates=True, noindex=Fa
 
 def age_gate(lang):
     d = L[lang]
-    return f"""<div id="agegate" hidden><div class="ag-box"><p class="ag-brand">NOVA WHISKY BAR</p><p>{d['age_q']}</p>
+    return f"""<div id="agegate" hidden><div class="ag-box"><img class="ag-mark" src="{BASE}assets/logo-mark.svg" alt="" width="64" height="73"><img class="ag-word" src="{BASE}assets/logo-en.svg" alt="Nova Whisky Bar" width="160" height="45"><p>{d['age_q']}</p>
 <button type="button" id="ag-yes">{d['age_yes']}</button><a href="https://www.google.com/" class="ag-no">{d['age_no']}</a></div></div>
 <script>(function(){{var g=document.getElementById('agegate'),ok=false;try{{ok=localStorage.getItem('nova_age_ok')==='1'}}catch(e){{}}
 if(!ok){{g.hidden=false}}document.getElementById('ag-yes').onclick=function(){{try{{localStorage.setItem('nova_age_ok','1')}}catch(e){{}}g.hidden=true}};}})();</script>
@@ -487,7 +489,7 @@ def header(lang, is_home=False):
         return BASE + h
     nav = "".join(f'<a href="{href(h)}">{t}</a>' for h, t in d["nav"])
     langs = "".join(f'<a href="{url_of(l)}" hreflang="{HREFLANG[l]}"{" aria-current=\"true\"" if l == lang else ""}>{L[l]["lang_name"]}</a>' for l in LANGS)
-    return f"""<header class="top"><div class="wrap bar"><a class="brand" href="{url_of(lang)}">NOVA WHISKY BAR<span class="badge">22.6°N · Kaohsiung</span></a>
+    return f"""<header class="top"><div class="wrap bar"><a class="brand" href="{url_of(lang)}"><img class="bm" src="{BASE}assets/logo-mark.svg" alt="" width="30" height="34"><img class="be" src="{BASE}assets/logo-en.svg" alt="Nova Whisky Bar 新星威士忌酒館" width="132" height="37"><span class="badge">22.6°N · Kaohsiung</span></a>
 <nav class="nav" aria-label="Main">{nav}</nav><nav class="langs" aria-label="Language">{langs}</nav></div></header>
 """
 
@@ -496,6 +498,7 @@ def footer(lang):
     extra = f'<p class="warn-extra">{d["warn_extra"]}</p>' if d["warn_extra"] else ""
     soc = "｜".join(f'<a href="{u}">{n}</a>' for n, u in socials())
     return f"""<footer class="foot"><div class="wrap">
+<p class="flogo"><img src="{BASE}assets/logo-mark.svg" alt="" width="44" height="50"><img src="{BASE}assets/logo-zh.svg" alt="新星威士忌酒館" width="194" height="32"></p>
 <p class="warn">未成年請勿飲酒｜禁止酒駕｜飲酒過量有害健康｜短時間大量攝取酒精容易致命</p>{extra}
 <p class="nap"><strong>Nova Whisky Bar 新星威士忌酒館</strong>（原 高雄高地人小酒館 Highlander Inn Takao）<br>
 高雄市苓雅區林森二路128巷14號 2樓<br>2F., No. 14, Ln. 128, Linsen 2nd Rd., Lingya Dist., Kaohsiung City, Taiwan<br>
@@ -527,7 +530,7 @@ PLATE = """<svg viewBox="0 0 1200 540" role="img" aria-label="{label}" preserveA
 <path d="M575 200 H625 C623 240 642 276 642 316 C642 356 625 378 600 378 C575 378 558 356 558 316 C558 276 577 240 575 200 Z" fill="none" stroke="#1A1917" stroke-width="1.5"/>
 <ellipse cx="600" cy="200" rx="25" ry="4.5" fill="none" stroke="#1A1917" stroke-width="1.2"/>
 <path d="M586 378 L583 402 H617 L614 378" fill="none" stroke="#1A1917" stroke-width="1.3"/><ellipse cx="600" cy="402" rx="27" ry="5" fill="none" stroke="#1A1917" stroke-width="1.3"/>
-<path d="M600 112 l6 22 22 6 -22 6 -6 22 -6 -22 -22 -6 22 -6z" fill="#8C5A2B"/>
+<image href="{mark}" x="574" y="96" width="52" height="59"/>
 <g stroke="#1A1917" stroke-width=".9" opacity=".5"><path d="M40 60V40H60M1140 40H1160V60M40 480V500H60M1140 500H1160V480" fill="none"/></g>
 <text x="600" y="462" text-anchor="middle" fill="#6B665E" font-family="Cormorant Garamond, serif" font-size="14" letter-spacing="6">HIGHLANDER INN TAKAO → NOVA WHISKY BAR · 2026</text>
 </svg>"""
@@ -572,8 +575,8 @@ def home(lang):
 <div class="strap"><span>{d['strap'][0]}</span><span>{d['strap'][1]}</span></div>
 <div class="mast"><div class="mast-l"><h1><span class="h1en">Nova Whisky Bar</span><span class="h1zh">{d['h1_sub']}</span></h1>
 <p class="lead">{d['lead']}</p><p class="formerly">{d['formerly']}</p></div>
-<div class="mast-r"><div class="side">{side}</div><p class="btns"><a class="btn" href="{MAP}">{d['btn_map']}</a><a class="btn ghost" href="{faq_href}">{d['btn_faq']}</a></p></div></div>
-<figure class="plate">{PLATE.format(label=html.escape(d['fig_caption']))}<figcaption>{d['fig_caption']}</figcaption></figure>
+<div class="mast-r"><img class="hero-mark" src="{BASE}assets/logo-mark.svg" alt="Nova Whisky Bar logo" width="120" height="137"><div class="side">{side}</div><p class="btns"><a class="btn" href="{MAP}">{d['btn_map']}</a><a class="btn ghost" href="{faq_href}">{d['btn_faq']}</a></p></div></div>
+<figure class="plate">{PLATE.format(label=html.escape(d['fig_caption']), mark=BASE + 'assets/logo-mark-amber.svg')}<figcaption>{d['fig_caption']}</figcaption></figure>
 </div></section>
 {sect("about", d["about_k"], d["about_h"], about_inner)}
 <section id="drink" class="band alt"><div class="wrap"><div class="sh row"><p class="k">{d['drink_k']}</p><h2>{d['drink_h']}</h2></div><div class="grid3">{drink}</div></div></section>
@@ -641,7 +644,7 @@ def article_template():
 def page_404():
     return f"""<!DOCTYPE html><html lang="zh-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>找不到頁面｜Nova Whisky Bar</title><meta name="robots" content="noindex"><link rel="stylesheet" href="{BASE}assets/style.css"></head>
-<body><main class="wrap narrow" style="padding:20vh 0"><h1 class="page">這杯好像倒空了</h1><p>找不到這個頁面。<a href="{BASE}">回到 Nova Whisky Bar 首頁</a></p></main></body></html>
+<body><main class="wrap narrow" style="padding:18vh 0"><img src="{BASE}assets/logo-mark.svg" alt="" width="60" height="68"><h1 class="page">這杯好像倒空了</h1><p>找不到這個頁面。<a href="{BASE}">回到 Nova Whisky Bar 首頁</a></p></main></body></html>
 """
 
 def sitemap():
@@ -728,7 +731,7 @@ a{color:var(--whisky);text-underline-offset:3px}a:hover{color:var(--ink)}
 h1,h2,h3{font-weight:400;margin:0}
 .top{position:sticky;top:0;z-index:10;background:rgba(246,244,239,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line)}
 .bar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 26px;min-height:68px;padding-top:10px;padding-bottom:10px}
-.brand{font-family:var(--display);font-size:20px;letter-spacing:.18em;color:var(--ink);text-decoration:none;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.brand{color:var(--ink);text-decoration:none;display:flex;align-items:center;gap:12px;flex-wrap:wrap}.brand .bm{height:34px;width:auto}.brand .be{height:37px;width:auto}
 .badge{font-family:var(--sans);font-size:11px;letter-spacing:.12em;color:var(--stone);border:1px solid var(--line);padding:1px 8px;border-radius:2px}
 .nav{display:flex;flex-wrap:wrap;gap:4px 22px;flex:1;justify-content:flex-end}.nav a{color:var(--stone);text-decoration:none;font-size:14px;padding:6px 0}.nav a:hover{color:var(--whisky)}
 .langs{display:flex;gap:12px}.langs a{color:var(--stone);text-decoration:none;font-size:13px}.langs a[aria-current]{color:var(--ink);border-bottom:1px solid var(--ink)}
@@ -739,7 +742,7 @@ h1,h2,h3{font-weight:400;margin:0}
 .h1zh{display:block;font-family:var(--serif);font-size:clamp(24px,3.4vw,36px);letter-spacing:.08em;margin-top:14px;color:rgba(26,25,23,.9)}
 .lead{font-size:17px;line-height:1.95;max-width:44em;margin:26px 0 0}
 .formerly{margin:18px 0 0;padding-left:14px;border-left:2px solid var(--whisky);font-size:13px;color:var(--stone)}
-.mast-r{display:flex;flex-direction:column;align-items:flex-end;gap:20px;text-align:right}
+.mast-r{display:flex;flex-direction:column;align-items:flex-end;gap:20px;text-align:right}.hero-mark{width:120px;height:auto}
 .side p{margin:0;font-size:13px;line-height:1.9;color:var(--stone)}
 .btns{display:flex;flex-wrap:wrap;gap:10px;margin:0}
 .btn{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;background:var(--ink);color:var(--paper);text-decoration:none;font-size:14px;border:1px solid var(--ink);border-radius:2px;transition:background .25s}
@@ -777,16 +780,17 @@ summary:hover .qt{color:var(--whisky)}details p{margin:0 0 20px;padding-left:34p
 h1.page{font-family:var(--serif);font-size:clamp(30px,4.6vw,44px);letter-spacing:.04em;margin:10px 0 6px}
 .todo{background:#FBE3E0;color:#8A1F17;border:1px dashed #C8483D;padding:0 6px;border-radius:2px;font-size:.92em;font-weight:400}
 .foot{border-top:1px solid var(--line);padding:40px 0 56px;font-size:13px;color:var(--stone)}
+.flogo{display:flex;align-items:center;gap:14px;margin:0 0 22px}.flogo img{height:auto}.flogo img:first-child{width:44px}.flogo img:last-child{width:194px}
 .warn{color:var(--ink);letter-spacing:.06em}.nap{line-height:1.9}.small{font-size:12px}
 #agegate{position:fixed;inset:0;z-index:50;background:rgba(246,244,239,.97);display:flex;align-items:center;justify-content:center;padding:24px}
 #agegate[hidden]{display:none}.ag-box{max-width:380px;text-align:center;border:1px solid var(--line);padding:36px 28px;background:var(--paper)}
-.ag-brand{font-family:var(--display);letter-spacing:.2em;font-size:18px}
+.ag-mark{display:block;margin:0 auto 12px;width:64px;height:auto}.ag-word{display:block;margin:0 auto 18px;width:160px;height:auto}
 #ag-yes{background:var(--ink);color:var(--paper);border:0;min-height:44px;padding:0 20px;font-size:15px;cursor:pointer;margin:8px;border-radius:2px}.ag-no{display:block;color:var(--stone);font-size:14px;margin-top:6px}
 :focus-visible{outline:2px solid var(--whisky);outline-offset:2px}
-@media (max-width:900px){.mast{grid-template-columns:1fr;gap:28px;padding:40px 0 34px}.mast-r{align-items:flex-start;text-align:left}
+@media (max-width:900px){.hero-mark{width:84px}.mast{grid-template-columns:1fr;gap:28px;padding:40px 0 34px}.mast-r{align-items:flex-start;text-align:left}
 .split{grid-template-columns:1fr;gap:22px}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
 .grid3 article:nth-child(3n){border-right:1px solid var(--line)}.grid3 article:nth-child(2n){border-right:0}.grid3 article:nth-last-child(-n+3){border-bottom:1px solid var(--line)}.grid3 article:nth-last-child(-n+2){border-bottom:0}}
-@media (max-width:600px){.nav{order:3;flex-basis:100%;justify-content:flex-start;gap:2px 18px}.langs{order:2}
+@media (max-width:600px){.hero-mark{display:none}.nav{order:3;flex-basis:100%;justify-content:flex-start;gap:2px 18px}.langs{order:2}
 .grid3{grid-template-columns:1fr}.grid3 article{border-right:0!important;border-bottom:1px solid var(--line)!important}.grid3 article:last-child{border-bottom:0!important}
 .facts{grid-template-columns:1fr}.info>div{grid-template-columns:1fr;gap:2px}details p{padding-left:0}.plate svg{aspect-ratio:4/3}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
@@ -813,7 +817,10 @@ def build(out="site", base=None):
     w("robots.txt", robots())
     w("llms.txt", llms())
     w("assets/style.css", CSS.strip() + "\n")
-    w("assets/favicon.svg", FAVICON)
+    os.makedirs(os.path.join(out, "assets"), exist_ok=True)
+    bdir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "brand")
+    for fn in os.listdir(bdir):
+        shutil.copy(os.path.join(bdir, fn), os.path.join(out, "assets", fn))
     w(".nojekyll", "")
     todos = sorted({k for k in FACTS for l in LANGS if not FACTS[k][l]})
     if not FB: todos.append("FB")
