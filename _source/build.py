@@ -16,6 +16,7 @@ TEL = "+886-7-330-8050"
 TEL_DISPLAY = "(07) 330-8050"
 MAP = "https://www.google.com/maps/search/?api=1&query=" + "Nova%20Whisky%20Bar%20%E6%96%B0%E6%98%9F%E5%A8%81%E5%A3%AB%E5%BF%8C%E9%85%92%E9%A4%A8"
 UPDATED = "2026-11-24"
+GSC_VERIFY = "7rN2XwgvWpnXKgskS-hm6eu_E0YZMaUBgmdgYN8YGvY"   # Google Search Console 驗證碼，請勿刪除
 OG_IMG = BASE + "assets/og.png"
 
 # ---------------------------------------------------------------
@@ -518,7 +519,8 @@ def head(lang, title, desc, canonical, schema_graph, alternates=True, noindex=Fa
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)}</title>
 <meta name="description" content="{html.escape(desc)}">
-{robots}<link rel="canonical" href="{canonical}">
+{robots}<meta name="google-site-verification" content="{GSC_VERIFY}">
+<link rel="canonical" href="{canonical}">
 {alt}<meta name="theme-color" content="#F6F4EF">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Nova Whisky Bar 新星威士忌酒館">
