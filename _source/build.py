@@ -23,8 +23,7 @@ OG_IMG = BASE + "assets/og.png"
 # 留 None 的地方，頁面上會顯示紅色【待填】標記。
 # ---------------------------------------------------------------
 FACTS = {
-    "transit":  {"zh": None, "en": None, "ja": None, "ko": None},  # 最近捷運站、步行幾分鐘、停車
-    "price":    {"zh": "低消每人 NT$500，另加 10% 服務費。",
+        "price":    {"zh": "低消每人 NT$500，另加 10% 服務費。",
                  "en": "Minimum spend NT$500 per person, plus a 10% service charge.",
                  "ja": "ミニマムチャージはお一人様 NT$500、別途サービス料10%がかかります。",
                  "ko": "1인 최소 주문 금액 NT$500, 서비스 요금 10% 별도입니다."},
@@ -40,8 +39,6 @@ FACTS = {
                  "ja": "現金・クレジットカード", "ko": "현금, 신용카드"},
 }
 TODO_LABEL = {
-    "transit":  {"zh": "最近捷運站、步行時間、停車", "en": "nearest MRT station, walking time, parking",
-                 "ja": "最寄りMRT駅・徒歩時間・駐車場", "ko": "가까운 MRT역, 도보 시간, 주차"},
     "price":    {"zh": "低消、服務費、單杯價位", "en": "minimum charge, service charge, price per pour",
                  "ja": "ミニマムチャージ・サービス料・1杯の価格帯", "ko": "최소 주문, 서비스 요금, 한 잔 가격대"},
     "bottles":  {"zh": "架上約幾支酒", "en": "approx. number of bottles", "ja": "おおよその本数", "ko": "대략적인 보유 병 수"},
@@ -114,7 +111,6 @@ L["zh"] = dict(
         ("地址", "高雄市苓雅區林森二路128巷14號 2樓"),
         ("營業時間", "週日至週五 20:00–01:30<br>週六 20:00–02:00"),
         ("電話", f'<a href="tel:{TEL}">{TEL_DISPLAY}</a>'),
-        ("交通", "{transit}"),
         ("消費方式", "{price}"),
         ("外語服務", "{language}"),
         ("付款方式", "{payment}"),
@@ -174,7 +170,6 @@ L["en"] = dict(
         ("Address", "2F., No. 14, Ln. 128, Linsen 2nd Rd., Lingya Dist., Kaohsiung City, Taiwan<br><small lang=\"zh-TW\">高雄市苓雅區林森二路128巷14號 2樓</small>"),
         ("Hours", "Sun–Fri 20:00–01:30<br>Sat 20:00–02:00"),
         ("Phone", f'<a href="tel:{TEL}">+886 7 330 8050</a>'),
-        ("Getting here", "{transit}"),
         ("Prices", "{price}"),
         ("Languages", "{language}"),
         ("Payment", "{payment}"),
@@ -234,7 +229,6 @@ L["ja"] = dict(
         ("住所", "高雄市苓雅区林森二路128巷14号 2階<br><small lang=\"zh-TW\">高雄市苓雅區林森二路128巷14號 2樓</small>"),
         ("営業時間", "日〜金 20:00–01:30<br>土 20:00–02:00"),
         ("電話", f'<a href="tel:{TEL}">+886 7 330 8050</a>'),
-        ("アクセス", "{transit}"),
         ("料金", "{price}"),
         ("対応言語", "{language}"),
         ("お支払い", "{payment}"),
@@ -294,7 +288,6 @@ L["ko"] = dict(
         ("주소", "2F., No. 14, Ln. 128, Linsen 2nd Rd., Lingya Dist., Kaohsiung City, Taiwan<br><small lang=\"zh-TW\">高雄市苓雅區林森二路128巷14號 2樓</small>"),
         ("영업시간", "일–금 20:00–01:30<br>토 20:00–02:00"),
         ("전화", f'<a href="tel:{TEL}">+886 7 330 8050</a>'),
-        ("교통", "{transit}"),
         ("가격", "{price}"),
         ("응대 언어", "{language}"),
         ("결제", "{payment}"),
@@ -323,7 +316,7 @@ FAQ = {
     ("可以點半杯嗎？", "可以。單杯價格超過 NT$500 的酒款都可以點半杯，想多試幾支高年份或稀有單桶時很方便。"),
     ("同行朋友不喝威士忌純飲，有其他選擇嗎？", "有。店裡也有 Highball、調酒與無酒精飲料，同行朋友各自有選擇。"),
     ("店裡有哪些威士忌？", "以蘇格蘭威士忌為主，包含各產區的單一麥芽，以及 Gordon &amp; MacPhail、Douglas Laing、SMWS 等獨立裝瓶商的單桶酒款。{bottles}"),
-    ("Nova 在哪裡？怎麼去？", "地址是高雄市苓雅區林森二路128巷14號 2樓。{transit}"),
+    ("Nova 在哪裡？", "地址是高雄市苓雅區林森二路128巷14號 2樓。"),
     ("營業時間是幾點到幾點？", "週日至週五 20:00–01:30，週六 20:00–02:00。公休與臨時異動以官方社群公告為準。"),
     ("大概的消費是多少？有低消嗎？", "{price}"),
     ("需要訂位嗎？", f"人數較多或週末建議先來電 {TEL_DISPLAY}，或私訊 Instagram @novawhisky。"),
@@ -340,7 +333,7 @@ FAQ = {
     ("Can I order a half pour?", "Yes. Any dram priced over NT$500 is available as a half pour — handy for trying older or rarer single casks."),
     ("My friends don't drink whisky neat. Anything for them?", "Yes — Highballs, cocktails and non-alcoholic drinks."),
     ("What whiskies do you have?", "Mainly Scotch: single malts from across the regions, plus single casks from independent bottlers such as Gordon &amp; MacPhail, Douglas Laing and SMWS. {bottles}"),
-    ("Where is Nova and how do I get there?", "2F., No. 14, Ln. 128, Linsen 2nd Rd., Lingya Dist., Kaohsiung City. {transit}"),
+    ("Where is Nova?", "2F., No. 14, Ln. 128, Linsen 2nd Rd., Lingya Dist., Kaohsiung City."),
     ("What are the opening hours?", "Sunday to Friday 20:00–01:30, Saturday 20:00–02:00. Closures are announced on our social media."),
     ("How much does it cost? Is there a minimum charge?", "{price}"),
     ("Do I need a reservation?", "For larger groups or weekends, call +886 7 330 8050 or send a DM to @novawhisky on Instagram."),
@@ -357,7 +350,7 @@ FAQ = {
     ("ハーフで注文できますか？", "はい。1杯 NT$500 を超えるウイスキーはすべてハーフで注文できます。高年数や希少なシングルカスクを何種類か試したいときに便利です。"),
     ("連れがストレートを飲みません。他の選択肢はありますか？", "はい。ハイボール、カクテル、ノンアルコールドリンクもあります。"),
     ("どんなウイスキーがありますか？", "スコッチが中心で、各地域のシングルモルトと、Gordon &amp; MacPhail、Douglas Laing、SMWS などの独立瓶詰めシングルカスクがあります。{bottles}"),
-    ("場所とアクセスは？", "住所は高雄市苓雅区林森二路128巷14号 2階です。{transit}"),
+    ("お店の場所は？", "住所は高雄市苓雅区林森二路128巷14号 2階です。"),
     ("営業時間は？", "日曜〜金曜 20:00–01:30、土曜 20:00–02:00。臨時休業は公式SNSでお知らせします。"),
     ("予算はどのくらいですか？ミニマムチャージはありますか？", "{price}"),
     ("予約は必要ですか？", "大人数や週末は、+886 7 330 8050 へのお電話か Instagram @novawhisky の DM でご連絡ください。"),
@@ -374,7 +367,7 @@ FAQ = {
     ("하프 잔으로 주문할 수 있나요?", "네. 한 잔 가격이 NT$500를 넘는 위스키는 모두 하프 잔으로 주문할 수 있습니다. 고숙성이나 희귀 싱글 캐스크를 여러 종류 맛볼 때 편리합니다."),
     ("일행이 위스키를 니트로 안 마시는데, 다른 선택지가 있나요?", "네. 하이볼, 칵테일, 무알코올 음료도 있습니다."),
     ("어떤 위스키가 있나요?", "스카치 위주로 지역별 싱글 몰트와 Gordon &amp; MacPhail, Douglas Laing, SMWS 등 독립 병입 싱글 캐스크가 있습니다. {bottles}"),
-    ("위치와 가는 방법은요?", "주소는 2F., No. 14, Ln. 128, Linsen 2nd Rd., Lingya Dist., Kaohsiung City입니다. {transit}"),
+    ("위치가 어디인가요?", "주소는 2F., No. 14, Ln. 128, Linsen 2nd Rd., Lingya Dist., Kaohsiung City입니다."),
     ("영업시간은 어떻게 되나요?", "일요일~금요일 20:00–01:30, 토요일 20:00–02:00입니다. 휴무는 공식 SNS에서 공지합니다."),
     ("가격대는 어느 정도인가요? 최소 주문이 있나요?", "{price}"),
     ("예약이 필요한가요?", "인원이 많거나 주말이라면 +886 7 330 8050으로 전화하시거나 Instagram @novawhisky로 DM 주세요."),
@@ -608,7 +601,7 @@ def faq_page():
     lang = "zh"
     page = BASE + "faq/"
     title = "常見問題｜Nova Whisky Bar 新星威士忌酒館（高雄苓雅威士忌酒吧）"
-    desc = "Nova Whisky Bar 新星威士忌酒館常見問題：新手與一個人來適不適合、半杯、Highball 與調酒、地址交通、營業時間、訂位、品酒會，以及和高雄高地人小酒館的關係。"
+    desc = "Nova Whisky Bar 新星威士忌酒館常見問題：新手與一個人來適不適合、半杯、Highball 與調酒、地址、營業時間、訂位、品酒會，以及和高雄高地人小酒館的關係。"
     graph = [faq_schema(lang, page), bar_schema(lang),
              {"@type": "BreadcrumbList", "itemListElement": [
                  {"@type": "ListItem", "position": 1, "name": "Nova Whisky Bar", "item": BASE},
@@ -679,7 +672,7 @@ def llms():
     faq_lines = re.sub(r"【待填：[^】]+】", "（尚未提供）", faq_lines)
     arts = "\n".join(f"- [{a['title']}]({a['url']})：{a['summary']}" for a in ARTICLES)
     soc = "\n".join(f"- {n}：{u}" for n, u in socials())
-    extra = "".join(f"- {lab}：{FACTS[k]['zh']}\n" for k, lab in [("transit","交通"),("price","消費方式"),("language","外語服務"),("payment","付款方式"),("bottles","酒款數量")] if FACTS[k]["zh"])
+    extra = "".join(f"- {lab}：{FACTS[k]['zh']}\n" for k, lab in [("price","消費方式"),("language","外語服務"),("payment","付款方式"),("bottles","酒款數量")] if FACTS[k]["zh"])
     return f"""# Nova Whisky Bar 新星威士忌酒館
 
 > 高雄市苓雅區的威士忌酒吧，安靜、適合一個人獨飲。以蘇格蘭單一麥芽、獨立裝瓶與單桶威士忌為主，單杯超過 NT$500 的酒款可點半杯，也有 Highball、調酒與無酒精飲料。前身為高雄高地人小酒館（Highlander Inn Takao），2026 年 4 月更名。屬於醉俠 The Drunken Master 體系，與建置中的南曜蒸餾所 NOVA Distillery 同一團隊。

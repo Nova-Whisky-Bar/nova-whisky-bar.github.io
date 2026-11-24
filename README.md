@@ -20,18 +20,6 @@
 4. Instagram @novawhisky、@drunkenkuo 的個人簡介連結改成官網。
 5. 用 https://search.google.com/test/rich-results 測試首頁與 /faq/，確認結構化資料無錯誤。
 
-## 待填資料
-
-頁面上紅色【待填】的地方，是這 5 項：
-
-- transit：最近捷運站、步行時間、停車
-- price：低消、服務費、單杯價位
-- bottles：架上約幾支酒
-- language：能不能用英日韓語點酒
-- payment：付款方式
-
-另外還缺：Facebook 與 Threads 官方網址（填入後會自動出現在頁面與結構化資料）、新 GitHub 帳號名稱。
-
 ## 新增品飲紀錄文章
 
 1. 複製 `journal/_template/` 資料夾，改名為酒款英文代稱，例如 `journal/smws-53-496/`。
