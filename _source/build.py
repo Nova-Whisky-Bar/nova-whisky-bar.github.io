@@ -84,7 +84,8 @@ L["zh"] = dict(
     formerly="前身為高雄高地人小酒館 Highlander Inn Takao・2026 年 4 月更名",
     side=["蘇格蘭單一麥芽／獨立裝瓶單桶", "單杯・半杯・Highball・調酒", "安靜獨飲・品牌品酒會"],
     btn_map="Google 地圖", btn_faq="第一次來看這裡",
-    fig_caption="Nova Whisky Bar・高雄苓雅・北緯 22.6 度",
+    fig_caption="店內一景：四面燈光酒牆上，陳列超過 500 瓶威士忌。",
+    photo_alt="Nova Whisky Bar 新星威士忌酒館店內，四面燈光酒牆陳列超過 500 瓶威士忌，中間是木桌與皮椅座位",
     about_k="About", about_h="關於 Nova",
     quote="一杯威士忌的距離，剛剛好的安靜。",
     about=[
@@ -143,7 +144,8 @@ L["en"] = dict(
     formerly="Formerly Highlander Inn Takao (高雄高地人小酒館) · Renamed April 2026",
     side=["Scotch single malts / independent single casks", "Full and half pours · Highballs · Cocktails", "Quiet solo drinking · Brand tastings"],
     btn_map="Google Maps", btn_faq="First visit? Start here",
-    fig_caption="Nova Whisky Bar · Lingya, Kaohsiung · 22.6°N",
+    fig_caption="Inside Nova: lit shelves on every wall, holding more than 500 bottles of whisky.",
+    photo_alt="Inside Nova Whisky Bar in Kaohsiung: illuminated whisky shelves on every wall with more than 500 bottles, wooden tables and leather chairs",
     about_k="About", about_h="About Nova",
     quote="Just the right amount of quiet, one dram at a time.",
     about=[
@@ -202,7 +204,8 @@ L["ja"] = dict(
     formerly="旧店名 Highlander Inn Takao（高雄高地人小酒館）・2026年4月改名",
     side=["スコッチのシングルモルト／独立瓶詰めシングルカスク", "1杯・ハーフ・ハイボール・カクテル", "静かなひとり飲み・テイスティング会"],
     btn_map="Googleマップ", btn_faq="初めての方へ",
-    fig_caption="Nova Whisky Bar・高雄市苓雅区・北緯22.6度",
+    fig_caption="店内：四方の壁を照らす棚に、500本以上のウイスキーが並びます。",
+    photo_alt="高雄 Nova Whisky Bar の店内。四方の壁一面に照明付きの棚があり、500本以上のウイスキーが並ぶ。木のテーブルと革張りの椅子",
     about_k="About", about_h="お店について",
     quote="ウイスキー一杯ぶんの、ちょうどいい静けさ。",
     about=[
@@ -261,7 +264,8 @@ L["ko"] = dict(
     formerly="옛 이름 Highlander Inn Takao(高雄高地人小酒館) · 2026년 4월 이름 변경",
     side=["스카치 싱글 몰트 / 독립 병입 싱글 캐스크", "한 잔 · 하프 잔 · 하이볼 · 칵테일", "조용한 혼술 · 브랜드 테이스팅"],
     btn_map="Google 지도", btn_faq="처음 오신다면",
-    fig_caption="Nova Whisky Bar · 가오슝 링야구 · 북위 22.6도",
+    fig_caption="가게 안: 네 벽을 채운 조명 선반에 500병이 넘는 위스키가 진열되어 있습니다.",
+    photo_alt="가오슝 Nova Whisky Bar 내부. 네 벽을 가득 채운 조명 선반에 500병이 넘는 위스키가 진열되어 있고, 나무 테이블과 가죽 의자가 놓여 있다",
     about_k="About", about_h="Nova 소개",
     quote="위스키 한 잔만큼의, 딱 알맞은 고요함.",
     about=[
@@ -408,7 +412,7 @@ def bar_schema(lang):
         "@type": "BarOrPub", "@id": BASE + "#bar",
         "name": "Nova Whisky Bar",
         "alternateName": ["新星威士忌酒館", "Nova Whisky Bar 新星威士忌酒館", "高雄高地人小酒館", "Highlander Inn Takao"],
-        "description": d["desc"], "url": url_of(lang), "image": OG_IMG, "logo": BASE + "assets/logo-512.png",
+        "description": d["desc"], "url": url_of(lang), "image": [BASE + "assets/interior-2400.jpg", OG_IMG], "logo": BASE + "assets/logo-512.png",
         "telephone": TEL, "address": addr, "hasMap": MAP,
         "openingHoursSpecification": [
             {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "20:00", "closes": "01:30"},
@@ -576,7 +580,7 @@ def home(lang):
 <div class="mast"><div class="mast-l"><h1><span class="h1en">Nova Whisky Bar</span><span class="h1zh">{d['h1_sub']}</span></h1>
 <p class="lead">{d['lead']}</p><p class="formerly">{d['formerly']}</p></div>
 <div class="mast-r"><img class="hero-mark" src="{BASE}assets/logo-mark.svg" alt="Nova Whisky Bar logo" width="120" height="137"><div class="side">{side}</div><p class="btns"><a class="btn" href="{MAP}">{d['btn_map']}</a><a class="btn ghost" href="{faq_href}">{d['btn_faq']}</a></p></div></div>
-<figure class="plate">{PLATE.format(label=html.escape(d['fig_caption']), mark=BASE + 'assets/logo-mark-amber.svg')}<figcaption>{d['fig_caption']}</figcaption></figure>
+<figure class="plate photo"><picture><source type="image/webp" srcset="{BASE}assets/interior-900.webp 900w, {BASE}assets/interior-1600.webp 1600w, {BASE}assets/interior-2400.webp 2400w" sizes="(max-width:1160px) 92vw, 1040px"><img src="{BASE}assets/interior-1600.jpg" srcset="{BASE}assets/interior-900.jpg 900w, {BASE}assets/interior-1600.jpg 1600w, {BASE}assets/interior-2400.jpg 2400w" sizes="(max-width:1160px) 92vw, 1040px" width="2400" height="1351" alt="{html.escape(d['photo_alt'])}" fetchpriority="high"></picture><figcaption>{d['fig_caption']}</figcaption></figure>
 </div></section>
 {sect("about", d["about_k"], d["about_h"], about_inner)}
 <section id="drink" class="band alt"><div class="wrap"><div class="sh row"><p class="k">{d['drink_k']}</p><h2>{d['drink_h']}</h2></div><div class="grid3">{drink}</div></div></section>
@@ -750,6 +754,7 @@ h1,h2,h3{font-weight:400;margin:0}
 .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}.btn.ghost:hover{border-color:var(--whisky);color:var(--whisky);background:transparent}
 .plate{margin:0;border-top:1px solid var(--line);padding-top:22px}
 .plate svg{display:block;width:100%;aspect-ratio:1200/540;border:1px solid var(--line);border-radius:2px;background:var(--paper2)}
+.plate.photo img{display:block;width:100%;height:auto;aspect-ratio:2400/1351;object-fit:cover;border-radius:2px;background:#2a241d}
 .plate figcaption{margin-top:10px;font-size:12px;color:var(--stone);letter-spacing:.06em}
 .band{padding:clamp(52px,7vw,96px) 0;border-top:1px solid var(--line)}.band.alt{background:rgba(237,233,224,.5)}
 .split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px}

@@ -34,6 +34,7 @@ h1,h2,h3{font-weight:400;margin:0}
 .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}.btn.ghost:hover{border-color:var(--whisky);color:var(--whisky);background:transparent}
 .plate{margin:0;border-top:1px solid var(--line);padding-top:22px}
 .plate svg{display:block;width:100%;aspect-ratio:1200/540;border:1px solid var(--line);border-radius:2px;background:var(--paper2)}
+.plate.photo img{display:block;width:100%;height:auto;aspect-ratio:2400/1351;object-fit:cover;border-radius:2px;background:#2a241d}
 .plate figcaption{margin-top:10px;font-size:12px;color:var(--stone);letter-spacing:.06em}
 .band{padding:clamp(52px,7vw,96px) 0;border-top:1px solid var(--line)}.band.alt{background:rgba(237,233,224,.5)}
 .split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:48px}
