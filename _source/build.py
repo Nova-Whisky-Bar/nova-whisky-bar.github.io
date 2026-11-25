@@ -844,7 +844,7 @@ def post_page(p, lang):
     info = "".join(f"<div><dt>{html.escape(k)}</dt><dd>{html.escape(v)}</dd></div>" for k, v in t["info"])
     notes = "".join(f"<div><dt>{html.escape(k)}</dt><dd>{html.escape(v)}</dd></div>" for k, v in t["notes"])
     body_p = "".join(f"<p>{html.escape(x)}</p>" for x in t["body"])
-    inner = f"""<p class="k">{SERIES[lang]}</p><p class="meta"><time datetime="{p['date']}">{p['date'].replace('-', '/')}</time>・{ui['by']}</p>
+    inner = f"""<p class="k">{SERIES[lang]}</p>
 <figure class="post-fig"><picture><source type="image/webp" srcset="{BASE}assets/{img}-720.webp 720w, {BASE}assets/{img}-1080.webp 1080w" sizes="(max-width:600px) 92vw, 460px"><img src="{big}" srcset="{BASE}assets/{img}-720.jpg 720w, {big} 1080w" sizes="(max-width:600px) 92vw, 460px" width="1080" height="1350" alt="{html.escape(t['alt'])}" fetchpriority="high"></picture><figcaption>{html.escape(ui['fig'])}</figcaption></figure>
 <dl class="info">{info}</dl>
 <div class="article">{body_p}</div>
@@ -866,7 +866,7 @@ def article_template():
               "author": {"@type": "Person", "name": "醉郭"},
               "publisher": {"@id": BASE + "#bar"}, "about": {"@type": "Thing", "name": "酒款名稱"},
               "mainEntityOfPage": page}]
-    inner = """<p class="k">座標 22.6°N｜新星亮這杯</p><p class="meta"><time datetime="YYYY-MM-DD">YYYY-MM-DD</time>・醉郭</p>
+    inner = """<p class="k">座標 22.6°N｜新星亮這杯</p>
 <dl class="info"><div><dt>酒廠</dt><dd>—</dd></div><div><dt>裝瓶商</dt><dd>—</dd></div><div><dt>年份／酒齡</dt><dd>—</dd></div><div><dt>桶型／桶號</dt><dd>—</dd></div><div><dt>酒精度</dt><dd>—</dd></div><div><dt>瓶數</dt><dd>—</dd></div></dl>
 <div class="article"><p>（貼上社群的繁中文案正文，段落照原樣分開即可。）</p><p class="beat">（關鍵轉折的單行短句）</p><p>（品飲描述）</p>
 <p>這杯在高雄苓雅的 Nova Whisky Bar 新星威士忌酒館喝得到，數量有限，以現場為準。</p></div>"""
