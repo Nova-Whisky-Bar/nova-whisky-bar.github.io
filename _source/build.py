@@ -391,16 +391,83 @@ ARTICLES = [
 SERIES = {"zh": "座標 22.6°N｜新星亮這杯", "en": "22.6°N | Nova in the Glass",
           "ja": "22.6°N | Nova in the Glass", "ko": "22.6°N | Nova in the Glass"}
 POST_UI = {
-    "zh": dict(crumb="文章", by="醉郭", notes_h="品飲紀錄", fig="The Drunken Master Whisky Bar 10 週年 × Café Swing 6 週年紀念單桶，酒標由 Elaine 手繪。",
+    "zh": dict(crumb="文章", by="醉郭", notes_h="品飲紀錄",
                closing="這杯在高雄苓雅的 Nova Whisky Bar 新星威士忌酒館喝得到，數量有限，以現場為準。"),
-    "en": dict(crumb="Journal", by="Drunken Kuo", notes_h="Tasting notes", fig="The anniversary cask for The Drunken Master Whisky Bar (10 years) and Café Swing (6 years), with a label hand-drawn by Elaine.",
+    "en": dict(crumb="Journal", by="Drunken Kuo", notes_h="Tasting notes",
                closing="You can drink this one at Nova Whisky Bar in Lingya District, Kaohsiung. Stock is limited — ask at the bar."),
-    "ja": dict(crumb="記事", by="醉郭（Drunken Kuo）", notes_h="テイスティングノート", fig="The Drunken Master Whisky Bar 10周年 × Café Swing 6周年の記念シングルカスク。ラベルは Elaine の手描き。",
+    "ja": dict(crumb="記事", by="醉郭（Drunken Kuo）", notes_h="テイスティングノート",
                closing="このウイスキーは高雄・苓雅区の Nova Whisky Bar でお飲みいただけます。数量限定のため、在庫は店頭でご確認ください。"),
-    "ko": dict(crumb="글", by="醉郭 (Drunken Kuo)", notes_h="테이스팅 노트", fig="The Drunken Master Whisky Bar 10주년 × Café Swing 6주년 기념 싱글 캐스크. 라벨은 Elaine이 직접 그렸습니다.",
+    "ko": dict(crumb="글", by="醉郭 (Drunken Kuo)", notes_h="테이스팅 노트",
                closing="이 위스키는 가오슝 링야구의 Nova Whisky Bar에서 맛보실 수 있습니다. 수량이 한정되어 있으니 재고는 매장에서 확인해 주세요."),
 }
 POSTS = [dict(
+    slug="glenrothes-2000-single-cask-2364", date="2026-11-25", img="glenrothes-2000-2364",
+    about="The Glenrothes 2000 Single Cask #2364 (Sherry Butt)",
+    text={
+        "zh": dict(
+            title="The Glenrothes 2000/2017 Single Cask #2364",
+            lead="BBR 時代以蒸餾年份標示的 Glenrothes 單桶，2000 年蒸餾、2017 年裝瓶。",
+            desc="The Glenrothes 2000 年蒸餾、2017 年裝瓶的單桶 #2364，Sherry Butt，575 瓶，58.7%，UK Exclusive Single Cask Series Batch #1。BBR 掌握品牌時期的年份酒標，在高雄 Nova Whisky Bar 喝得到。",
+            summary="BBR 時代的年份酒標，2000 年蒸餾、2017 年裝瓶，Sherry Butt #2364，58.7%。",
+            alt="The Glenrothes 2000 Single Cask #2364 酒瓶，金色酒標，背景是 Nova Whisky Bar 的酒架",
+            fig="UK Exclusive Single Cask Series 第一批，Sherry Butt #2364。",
+            info=[("酒廠", "Glenrothes"), ("系列", "UK Exclusive Single Cask Series, Batch #1"), ("蒸餾", "2000"), ("裝瓶", "2017"),
+                  ("桶型", "Sherry Butt"), ("桶號", "#2364"), ("瓶數", "575 瓶"), ("酒精度", "58.7%")],
+            body=["最近高雄的天氣瞬間轉涼了許多，好像該喝一杯溫暖的雪莉桶威士忌了。",
+                  "這瓶 Glenrothes 跟現在的酒標怎麼長得不一樣呢？因為這時的 Glenrothes 酒廠雖然隸屬於 Edrington，但實際品牌所有權是在英國百年酒商 Berry Bros. & Rudd（BBR）手上，當時酒標是以 Vintage 蒸餾年份建立辨識度。",
+                  "直到 2017 年 5 月，Edrington 買回品牌，酒廠與品牌再度合而為一；隔年，酒標也改成大家比較熟悉的熟成年數。",
+                  "這瓶單桶蘊藏著兩段歷史故事。2000 年蒸餾時，酒廠恰逢「做半年、休半年」的減產期；裝瓶的 2017 年，則是品牌交接的那一年，有沒有很剛好？",
+                  "58.7% 的原酒強度，喝起來就像在微涼空氣裡聞到明亮的葡萄乾與莓果軟糖，入口後則轉為中深焙咖啡豆的沉穩氣息。很適合在這樣轉涼的夜晚，來 Nova 慢慢喝一杯。"],
+            notes=[("香氣", "明亮的葡萄乾、莓果軟糖、深色莓果、柑橘與果乾，接著是焦糖、堅果與香草，後段是橡木、甘草、肉桂與胡椒"),
+                   ("口感", "中等口感。豐富的葡萄乾、莓果、柑橘、焦糖、黑巧克力、黑咖啡、堅果、烘烤橡木、小荳蔻與胡椒"),
+                   ("尾韻", "中長尾韻。葡萄乾、果乾、柑橘、黑巧克力、些微焦糖、核桃、橡木、皮革、小荳蔻與胡椒")]),
+        "en": dict(
+            title="The Glenrothes 2000/2017 Single Cask #2364",
+            lead="A Glenrothes single cask from the Berry Bros. & Rudd era, when the label led with the vintage.",
+            desc="The Glenrothes Single Cask #2364, distilled 2000 and bottled 2017 (Sherry Butt, 575 bottles, 58.7%), UK Exclusive Single Cask Series, Batch #1, from the Berry Bros. & Rudd vintage era. Pouring at Nova Whisky Bar, Kaohsiung.",
+            summary="A vintage-era Glenrothes from the BBR years: distilled 2000, bottled 2017, Sherry Butt #2364, 58.7%.",
+            alt="Bottle of The Glenrothes 2000 Single Cask #2364 with its gold label, in front of the shelves at Nova Whisky Bar",
+            fig="UK Exclusive Single Cask Series, Batch #1 — Sherry Butt #2364.",
+            info=[("Distillery", "Glenrothes"), ("Series", "UK Exclusive Single Cask Series, Batch #1"), ("Distilled", "2000"), ("Bottled", "2017"),
+                  ("Cask type", "Sherry Butt"), ("Cask number", "#2364"), ("Bottles", "575"), ("ABV", "58.7%")],
+            body=["Kaohsiung just turned chilly—time for a sherry cask.",
+                  "Under BBR, Glenrothes highlighted the vintage year. Edrington bought the brand back in May 2017, and the core range switched to age statements in 2018.",
+                  "Distilled in 2000 (six months on, six off) and bottled in 2017. This 58.7% cask moves from raisins and berry gummies to medium-dark roast coffee. Come unwind at Nova."],
+            notes=[("Nose", "Bright raisins, berry gummies, dark berries, citrus and dried fruits. Followed by caramel, nuts and vanilla. Later, oak, liquorice, cinnamon and pepper."),
+                   ("Palate", "Medium mouthfeel. Rich raisins, berries, citrus, caramel, dark chocolate, black coffee, nuts, toasted oak, cardamom and pepper."),
+                   ("Finish", "Medium-long. Raisins, dried fruits, citrus, dark chocolate, a hint of caramel, walnuts, oak, leather, cardamom and pepper.")]),
+        "ja": dict(
+            title="The Glenrothes 2000/2017 Single Cask #2364",
+            lead="Berry Bros. & Rudd がブランドを持ち、蒸留年で名乗っていた時代の Glenrothes シングルカスク。",
+            desc="2000年蒸留・2017年瓶詰めの The Glenrothes シングルカスク #2364（Sherry Butt、575本、58.7%）。UK Exclusive Single Cask Series Batch #1。BBR 時代のヴィンテージ表記ボトルを高雄の Nova Whisky Bar で。",
+            summary="BBR 時代のヴィンテージ表記。2000年蒸留、2017年瓶詰め、Sherry Butt #2364、58.7%。",
+            alt="金色ラベルの The Glenrothes 2000 Single Cask #2364 のボトル。背景は Nova Whisky Bar のボトル棚",
+            fig="UK Exclusive Single Cask Series 第1弾、Sherry Butt #2364。",
+            info=[("蒸溜所", "Glenrothes"), ("シリーズ", "UK Exclusive Single Cask Series, Batch #1"), ("蒸溜", "2000"), ("瓶詰め", "2017"),
+                  ("樽", "Sherry Butt"), ("樽番号", "#2364"), ("本数", "575本"), ("アルコール度数", "58.7%")],
+            body=["急に涼しくなった高雄。シェリー樽熟成のウイスキーが恋しくなる夜です。",
+                  "蒸留年を大きく記したこのラベルは、英国の老舗酒商BBRがブランドを持っていた頃のもの。2017年5月にエドリントンが買い戻し、翌年、主力シリーズは熟成年数表記に変わりました。",
+                  "半年稼働・半年休止で減産していた2000年に蒸留、ブランドが戻った2017年に瓶詰めされた一本です。58.7%の原酒はレーズンとベリーグミが香り、口に含むと中深煎りのコーヒーを思わせます。今夜はNovaでゆっくりどうぞ。"],
+            notes=[("香り", "明るいレーズン、ベリーグミ、ダークベリー、シトラス、ドライフルーツ。続いてキャラメル、ナッツ、バニラ。後半はオーク、リコリス、シナモン、ペッパー"),
+                   ("味わい", "ミディアムな口当たり。濃厚なレーズン、ベリー、シトラス、キャラメル、ダークチョコレート、ブラックコーヒー、ナッツ、トーストしたオーク、カルダモン、ペッパー"),
+                   ("余韻", "ミディアムロング。レーズン、ドライフルーツ、シトラス、ダークチョコレート、ほのかなキャラメル、クルミ、オーク、レザー、カルダモン、ペッパー")]),
+        "ko": dict(
+            title="The Glenrothes 2000/2017 Single Cask #2364",
+            lead="Berry Bros. & Rudd가 브랜드를 갖고 증류 연도로 이름을 붙이던 시절의 Glenrothes 싱글 캐스크.",
+            desc="2000년 증류, 2017년 병입한 The Glenrothes 싱글 캐스크 #2364(Sherry Butt, 575병, 58.7%). UK Exclusive Single Cask Series Batch #1. BBR 시절 빈티지 라벨 보틀을 가오슝 Nova Whisky Bar에서 맛볼 수 있습니다.",
+            summary="BBR 시절 빈티지 라벨. 2000년 증류, 2017년 병입, Sherry Butt #2364, 58.7%.",
+            alt="금색 라벨의 The Glenrothes 2000 Single Cask #2364 보틀. 뒤로 Nova Whisky Bar의 술장이 보인다",
+            fig="UK Exclusive Single Cask Series 첫 배치, Sherry Butt #2364.",
+            info=[("증류소", "Glenrothes"), ("시리즈", "UK Exclusive Single Cask Series, Batch #1"), ("증류", "2000"), ("병입", "2017"),
+                  ("캐스크", "Sherry Butt"), ("캐스크 번호", "#2364"), ("병 수", "575병"), ("도수", "58.7%")],
+            body=["갑자기 선선해진 가오슝, 셰리 캐스크가 생각나는 밤입니다.",
+                  "영국 주류상 BBR 시절의 증류 연도 라벨입니다. 2017년 5월 에드링턴이 브랜드를 되찾고, 이듬해 주력 라인은 숙성 연수 표기로 바뀌었죠.",
+                  "반년만 가동하던 2000년에 증류해 브랜드가 돌아간 2017년에 병입했습니다. 58.7% 원액은 건포도와 베리 젤리 향 뒤로 중강배전 커피가 떠오릅니다. 오늘 밤 Nova에서 천천히 즐겨 보세요."],
+            notes=[("향", "밝은 건포도, 베리 젤리, 검은 베리류, 시트러스, 말린 과일. 이어서 캐러멜, 견과류, 바닐라, 후반에는 오크, 감초, 시나몬, 후추"),
+                   ("맛", "미디엄 바디. 풍부한 건포도, 베리, 시트러스, 캐러멜, 다크 초콜릿, 블랙 커피, 견과류, 토스트한 오크, 카다멈, 후추"),
+                   ("피니시", "미디엄 롱. 건포도, 말린 과일, 시트러스, 다크 초콜릿, 은은한 캐러멜, 호두, 오크, 가죽, 카다멈, 후추")]),
+    },
+), dict(
     slug="laphroaig-10-friendship-cask", date="2026-11-25", img="laphroaig-friendship-cask",
     about="Laphroaig 10 Years Old The Friendship Cask (Bourbon Cask #7)",
     text={
@@ -418,6 +485,7 @@ POSTS = [dict(
                   "Café Swing 的老闆喝到樣品時，說這是一款非常美味的 Laphroaig，波本桶帶來的多層次熱帶水果香氣，明亮而華麗地綻放，令人印象深刻。",
                   "酒標則由 The Drunken Master Whisky Bar 的店長 Elaine 親手繪製，將兩間酒吧的空間與回憶，留在這張特別的紀念酒標上。",
                   "今晚，這瓶象徵台韓友誼的 Laphroaig 10 年，已經可以在 Nova Whisky Bar 喝到單杯了，讓我們邊喝邊為這兩間酒吧慶祝一下吧！"],
+            fig="The Drunken Master Whisky Bar 10 週年 × Café Swing 6 週年紀念單桶，酒標由 Elaine 手繪。",
             notes=[("品飲日期", "2026/11/11 20:05"), ("酒色", "淺琥珀色"),
                    ("香氣", "剛開始散發柔和的泥煤及煙燻氣息，鹹味、柑橘、鳳梨、蘋果、熱帶果香和些微碘味點綴著，接著是碳烤、黑巧克力、核桃和香草草本，後段是礦物感、薑、薄荷涼感與辛香料"),
                    ("口感", "中等口感。剛開始有些許鹹味、泥煤、煙燻、柑橘、烤鳳梨、熟果、麥芽、黑巧克力、薑與胡椒"),
@@ -435,6 +503,7 @@ POSTS = [dict(
                   "THE FRIENDSHIP CASK is a 10-year-old Laphroaig single cask celebrating the 10th anniversary of The Drunken Master Whisky Bar in Taiwan and the 6th anniversary of Café Swing in Korea.",
                   "Café Swing's owner called it a truly delicious Laphroaig, praising its bright, layered tropical fruit aromas. The label was hand-drawn by Elaine, manager of The Drunken Master Whisky Bar, capturing both bars and the memories made in them.",
                   "Now pouring by the glass at Nova Whisky Bar. Come raise a glass to their friendship with us!"],
+            fig="The anniversary cask for The Drunken Master Whisky Bar (10 years) and Café Swing (6 years), with a label hand-drawn by Elaine.",
             notes=[("Tasted", "2026/11/11 20:05"), ("Colour", "Pale amber"),
                    ("Nose", "Soft peat smoke, sea salt, citrus, pineapple and tropical fruit, with a touch of iodine. Then charred notes, dark chocolate, walnut, vanilla and herbs, followed by mineral notes, ginger, mint and spice."),
                    ("Palate", "Medium-bodied. Salt, peat smoke, citrus, grilled pineapple, ripe fruit, malt, dark chocolate, ginger and pepper."),
@@ -453,6 +522,7 @@ POSTS = [dict(
                   "Café Swingのオーナーも「とてもおいしいラフロイグ」と絶賛。幾重にも広がる、明るく華やかなトロピカルフルーツの香りが印象的です。",
                   "ラベルは The Drunken Master Whisky Bar の店長 Elaine が、両店の空間と思い出を手描きしました。",
                   "今夜から Nova Whisky Bar にてグラスでお楽しみいただけます。両店の記念日を一緒にお祝いしましょう！"],
+            fig="The Drunken Master Whisky Bar 10周年 × Café Swing 6周年の記念シングルカスク。ラベルは Elaine の手描き。",
             notes=[("テイスティング日", "2026/11/11 20:05"), ("色", "淡いアンバー"),
                    ("香り", "はじめは穏やかなピートとスモーク。塩気、シトラス、パイナップル、リンゴ、トロピカルフルーツにほのかなヨード。続いて炭火のロースト香、ダークチョコレート、クルミ、バニラとハーブ。後半はミネラル、ジンジャー、ミントの清涼感とスパイス"),
                    ("味わい", "ミディアムボディ。はじめにほのかな塩気、ピート、スモーク、シトラス、焼きパイナップル、熟した果実、モルト、ダークチョコレート、ジンジャー、ペッパー"),
@@ -471,6 +541,7 @@ POSTS = [dict(
                   "Café Swing 사장님은 샘플을 맛보고 정말 맛있는 Laphroaig라고 하셨습니다. 버번 캐스크에서 숙성된 이 위스키의 다채로운 열대과일 향이 밝고 화려하게 피어나 깊은 인상을 남겼다고 합니다.",
                   "라벨은 The Drunken Master Whisky Bar의 점장 Elaine이 직접 그렸습니다. 두 바의 공간과 추억을 이 특별한 기념 라벨에 담았습니다.",
                   "오늘 밤부터 대만과 한국의 우정을 담은 이 Laphroaig 10년을 Nova Whisky Bar에서 잔으로 즐기실 수 있습니다. 한 잔 기울이며 두 바의 기념일을 함께 축하해 주세요!"],
+            fig="The Drunken Master Whisky Bar 10주년 × Café Swing 6주년 기념 싱글 캐스크. 라벨은 Elaine이 직접 그렸습니다.",
             notes=[("테이스팅 일시", "2026/11/11 20:05"), ("색", "옅은 앰버"),
                    ("향", "처음에는 부드러운 피트와 스모키함. 짭조름함, 시트러스, 파인애플, 사과, 열대과일에 은은한 요오드가 더해집니다. 이어서 숯불에 구운 향, 다크 초콜릿, 호두, 바닐라와 허브, 후반에는 미네랄, 생강, 민트의 청량감과 스파이스"),
                    ("맛", "미디엄 바디. 처음에는 약간의 짭조름함, 피트, 스모키함, 시트러스, 구운 파인애플, 잘 익은 과일, 몰트, 다크 초콜릿, 생강, 후추"),
@@ -845,7 +916,7 @@ def post_page(p, lang):
     notes = "".join(f"<div><dt>{html.escape(k)}</dt><dd>{html.escape(v)}</dd></div>" for k, v in t["notes"])
     body_p = "".join(f"<p>{html.escape(x)}</p>" for x in t["body"])
     inner = f"""<p class="k">{SERIES[lang]}</p>
-<figure class="post-fig"><picture><source type="image/webp" srcset="{BASE}assets/{img}-720.webp 720w, {BASE}assets/{img}-1080.webp 1080w" sizes="(max-width:600px) 92vw, 460px"><img src="{big}" srcset="{BASE}assets/{img}-720.jpg 720w, {big} 1080w" sizes="(max-width:600px) 92vw, 460px" width="1080" height="1350" alt="{html.escape(t['alt'])}" fetchpriority="high"></picture><figcaption>{html.escape(ui['fig'])}</figcaption></figure>
+<figure class="post-fig"><picture><source type="image/webp" srcset="{BASE}assets/{img}-720.webp 720w, {BASE}assets/{img}-1080.webp 1080w" sizes="(max-width:600px) 92vw, 460px"><img src="{big}" srcset="{BASE}assets/{img}-720.jpg 720w, {big} 1080w" sizes="(max-width:600px) 92vw, 460px" width="1080" height="1350" alt="{html.escape(t['alt'])}" fetchpriority="high"></picture>{('<figcaption>' + html.escape(t['fig']) + '</figcaption>') if t.get('fig') else ''}</figure>
 <dl class="info">{info}</dl>
 <div class="article">{body_p}</div>
 <h2 class="post-h">{ui['notes_h']}</h2>
