@@ -35,7 +35,7 @@
 - [English](https://nova-whisky-bar.github.io/en/)
 - [日本語](https://nova-whisky-bar.github.io/ja/)
 - [한국어](https://nova-whisky-bar.github.io/ko/)
-- [文章與品飲紀錄](https://nova-whisky-bar.github.io/journal/)
+- [文章與品飲紀錄](https://nova-whisky-bar.github.io/journal/)（[English](https://nova-whisky-bar.github.io/en/journal/)、[日本語](https://nova-whisky-bar.github.io/ja/journal/)、[한국어](https://nova-whisky-bar.github.io/ko/journal/)）
 
 ## 常見問題
 - Nova Whisky Bar 是什麼樣的酒吧？：高雄苓雅區的威士忌酒吧，以蘇格蘭威士忌為主，特別是單一麥芽、獨立裝瓶與單桶酒款。店裡安靜、適合一個人獨飲，可以依你的口味和喜歡的桶型推薦，也能安排幾支酒並排比較。
@@ -55,5 +55,6 @@
 - Nova 和醉俠是什麼關係？：Nova 屬於醉俠 The Drunken Master 體系，和高雄建置中的南曜蒸餾所 NOVA Distillery 是同一個團隊。
 
 ## 文章
+- [Laphroaig 10 年 The Friendship Cask](https://nova-whisky-bar.github.io/journal/laphroaig-10-friendship-cask/)：紀念 The Drunken Master Whisky Bar 10 週年與韓國 Café Swing 6 週年的 Laphroaig 單桶，Bourbon Cask #7，59.5%。（[English](https://nova-whisky-bar.github.io/en/journal/laphroaig-10-friendship-cask/)、[日本語](https://nova-whisky-bar.github.io/ja/journal/laphroaig-10-friendship-cask/)、[한국어](https://nova-whisky-bar.github.io/ko/journal/laphroaig-10-friendship-cask/)）
 - [Gordon & MacPhail Connoisseurs Choice 老年份四支：Dallas Dhu、Glen Albyn、Ardbeg、Port Ellen](https://zerg1129.github.io/nova-GM-Old-Connoisseurs-Choice-/)：四支 Connoisseurs Choice 老年份單一麥芽，搭配各自酒廠的歷史與品飲紀錄。
 - [一篇看懂橡木桶如何改變威士忌](https://zerg1129.github.io/nova-knowledge/)：美洲橡木、歐洲橡木、風乾與烘烤，如何一路影響杯中的風味。新手友善的入門指南。

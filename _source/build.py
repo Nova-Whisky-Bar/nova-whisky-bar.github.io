@@ -15,7 +15,7 @@ THREADS = "https://www.threads.com/@novawhisky"
 TEL = "+886-7-330-8050"
 TEL_DISPLAY = "(07) 330-8050"
 MAP = "https://www.google.com/maps/search/?api=1&query=" + "Nova%20Whisky%20Bar%20%E6%96%B0%E6%98%9F%E5%A8%81%E5%A3%AB%E5%BF%8C%E9%85%92%E9%A4%A8"
-UPDATED = "2026-11-24"
+UPDATED = "2026-11-25"
 GSC_VERIFY = "7rN2XwgvWpnXKgskS-hm6eu_E0YZMaUBgmdgYN8YGvY"   # Google Search Console 驗證碼，請勿刪除
 OG_IMG = BASE + "assets/og.png"
 
@@ -136,7 +136,7 @@ L["en"] = dict(
     fonts="family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+TC:wght@400;500&family=Noto+Sans+TC:wght@300;400;500",
     title="Nova Whisky Bar | Quiet Whisky Bar in Kaohsiung, Taiwan (Lingya District)",
     desc="Nova Whisky Bar (新星威士忌酒館) is a quiet whisky bar in Lingya District, Kaohsiung, Taiwan, formerly Highlander Inn Takao. Scotch single malts, independent bottlings and single casks, with half pours available.",
-    nav=[("#about", "About"), ("#drink", "Drinks"), ("#visit", "Visit"), ("#faq", "FAQ"), ("../journal/", "Journal")],
+    nav=[("#about", "About"), ("#drink", "Drinks"), ("#visit", "Visit"), ("#faq", "FAQ"), ("en/journal/", "Journal")],
     strap=("Lingya District, Kaohsiung · Whisky Bar", "Single malt · Independent bottlings · Quiet nights"),
     h1_sub="新星威士忌酒館",
     lead="Nova Whisky Bar (新星威士忌酒館) is a quiet whisky bar in Lingya District, Kaohsiung, Taiwan — a good place to drink on your own. The back bar is built around Scotch single malts, independent bottlings and single casks, and any dram over NT$500 can be ordered as a half pour. We are part of The Drunken Master (醉俠) family and share a team with NOVA Distillery (南曜蒸餾所), a craft distillery being built in Kaohsiung.",
@@ -183,7 +183,7 @@ L["en"] = dict(
         ("Nova Whisky Bar (新星威士忌酒館)", "Our whisky bar in Lingya District — you're here."),
         ("NOVA Distillery (南曜蒸餾所)", "The team's craft distillery under construction in Kaohsiung, run hands-on from mashing to distillation."),
     ],
-    journal_k=None, journal_h=None, journal_more=None,
+    journal_k="Journal", journal_h="Journal", journal_more="All articles",
     warn_extra="Please drink responsibly. No drink driving. Over 18s only.",
     age_q="Are you 18 or older?", age_yes="Yes, I am 18+", age_no="No, leave",
     lang_name="English",
@@ -194,7 +194,7 @@ L["ja"] = dict(
     fonts="family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;500;600&family=Noto+Sans+JP:wght@300;400;500",
     title="Nova Whisky Bar 新星威士忌酒館｜台湾・高雄の静かなウイスキーバー（苓雅区）",
     desc="Nova Whisky Bar（新星威士忌酒館）は台湾・高雄市苓雅区の静かなウイスキーバー。旧店名 Highlander Inn Takao。スコッチのシングルモルト、独立瓶詰め、シングルカスクが中心で、ハーフショットも可能です。",
-    nav=[("#about", "お店について"), ("#drink", "楽しみ方"), ("#visit", "アクセス"), ("#faq", "よくある質問"), ("../journal/", "記事")],
+    nav=[("#about", "お店について"), ("#drink", "楽しみ方"), ("#visit", "アクセス"), ("#faq", "よくある質問"), ("ja/journal/", "記事")],
     strap=("高雄市苓雅区・ウイスキーバー", "シングルモルト・独立瓶詰め・静かな夜"),
     h1_sub="新星威士忌酒館",
     lead="Nova Whisky Bar（新星威士忌酒館）は、台湾・高雄市苓雅区にある静かなウイスキーバーです。お一人でも落ち着いて飲めます。スコッチのシングルモルト、独立瓶詰め、シングルカスクを中心に揃え、1杯 NT$500 を超えるウイスキーはハーフでも注文できます。高雄のウイスキーブランド「醉俠 The Drunken Master」のグループで、高雄で建設中のクラフト蒸溜所「南曜蒸餾所 NOVA Distillery」と同じチームが運営しています。",
@@ -241,7 +241,7 @@ L["ja"] = dict(
         ("Nova Whisky Bar 新星威士忌酒館", "苓雅区のウイスキーバー。このお店です。"),
         ("南曜蒸餾所 NOVA Distillery", "チームが高雄で建設中のクラフト蒸溜所。糖化から蒸溜まで自分たちの手で行います。"),
     ],
-    journal_k=None, journal_h=None, journal_more=None,
+    journal_k="Journal", journal_h="記事", journal_more="記事一覧へ",
     warn_extra="20歳未満の飲酒は日本の法律で禁止されています。台湾では18歳未満の飲酒は禁止です。飲酒運転は絶対にやめましょう。",
     age_q="18歳以上ですか？", age_yes="はい、18歳以上です", age_no="いいえ、退出します",
     lang_name="日本語",
@@ -252,7 +252,7 @@ L["ko"] = dict(
     fonts="family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+KR:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500",
     title="Nova Whisky Bar 新星威士忌酒館｜대만 가오슝의 조용한 위스키 바 (링야구)",
     desc="Nova Whisky Bar(新星威士忌酒館)는 대만 가오슝 링야구의 조용한 위스키 바입니다. 옛 이름 Highlander Inn Takao. 스카치 싱글 몰트, 독립 병입, 싱글 캐스크 중심이며 하프 잔도 주문할 수 있습니다.",
-    nav=[("#about", "소개"), ("#drink", "즐기는 법"), ("#visit", "찾아오는 길"), ("#faq", "자주 묻는 질문"), ("../journal/", "글")],
+    nav=[("#about", "소개"), ("#drink", "즐기는 법"), ("#visit", "찾아오는 길"), ("#faq", "자주 묻는 질문"), ("ko/journal/", "글")],
     strap=("가오슝 링야구 · 위스키 바", "싱글 몰트 · 독립 병입 · 조용한 밤"),
     h1_sub="新星威士忌酒館",
     lead="Nova Whisky Bar(新星威士忌酒館)는 대만 가오슝시 링야구에 있는 조용한 위스키 바로, 혼자 마시기에도 편안한 곳입니다. 스카치 싱글 몰트, 독립 병입, 싱글 캐스크를 중심으로 갖추고 있으며, 한 잔에 NT$500가 넘는 위스키는 하프 잔으로도 주문할 수 있습니다. 가오슝 위스키 브랜드 醉俠 The Drunken Master 소속이며, 가오슝에서 건설 중인 크래프트 증류소 南曜蒸餾所 NOVA Distillery와 같은 팀이 운영합니다.",
@@ -299,7 +299,7 @@ L["ko"] = dict(
         ("Nova Whisky Bar 新星威士忌酒館", "링야구의 위스키 바, 바로 이곳입니다."),
         ("南曜蒸餾所 NOVA Distillery", "팀이 가오슝에 짓고 있는 크래프트 증류소. 당화부터 증류까지 직접 운영합니다."),
     ],
-    journal_k=None, journal_h=None, journal_more=None,
+    journal_k="Journal", journal_h="글", journal_more="전체 글 보기",
     warn_extra="대만에서는 만 18세 미만 음주가 금지되어 있습니다. 음주운전은 절대 하지 마세요.",
     age_q="만 18세 이상이신가요?", age_yes="네, 18세 이상입니다", age_no="아니요, 나가기",
     lang_name="한국어",
@@ -385,6 +385,111 @@ ARTICLES = [
          title="一篇看懂橡木桶如何改變威士忌",
          summary="美洲橡木、歐洲橡木、風乾與烘烤，如何一路影響杯中的風味。新手友善的入門指南。"),
 ]
+
+# 站內品飲紀錄（四語，新的放最上面）。網址：journal/SLUG/、en/journal/SLUG/、ja/journal/SLUG/、ko/journal/SLUG/
+# img：assets/ 裡的照片檔名前綴，需有 -720 與 -1080 的 .jpg／.webp（直式 1080×1350）
+SERIES = {"zh": "座標 22.6°N｜新星亮這杯", "en": "22.6°N | Nova in the Glass",
+          "ja": "22.6°N | Nova in the Glass", "ko": "22.6°N | Nova in the Glass"}
+POST_UI = {
+    "zh": dict(crumb="文章", by="醉郭", notes_h="品飲紀錄", fig="The Drunken Master Whisky Bar 10 週年 × Café Swing 6 週年紀念單桶，酒標由 Elaine 手繪。",
+               closing="這杯在高雄苓雅的 Nova Whisky Bar 新星威士忌酒館喝得到，數量有限，以現場為準。"),
+    "en": dict(crumb="Journal", by="Drunken Kuo", notes_h="Tasting notes", fig="The anniversary cask for The Drunken Master Whisky Bar (10 years) and Café Swing (6 years), with a label hand-drawn by Elaine.",
+               closing="You can drink this one at Nova Whisky Bar in Lingya District, Kaohsiung. Stock is limited — ask at the bar."),
+    "ja": dict(crumb="記事", by="醉郭（Drunken Kuo）", notes_h="テイスティングノート", fig="The Drunken Master Whisky Bar 10周年 × Café Swing 6周年の記念シングルカスク。ラベルは Elaine の手描き。",
+               closing="このウイスキーは高雄・苓雅区の Nova Whisky Bar でお飲みいただけます。数量限定のため、在庫は店頭でご確認ください。"),
+    "ko": dict(crumb="글", by="醉郭 (Drunken Kuo)", notes_h="테이스팅 노트", fig="The Drunken Master Whisky Bar 10주년 × Café Swing 6주년 기념 싱글 캐스크. 라벨은 Elaine이 직접 그렸습니다.",
+               closing="이 위스키는 가오슝 링야구의 Nova Whisky Bar에서 맛보실 수 있습니다. 수량이 한정되어 있으니 재고는 매장에서 확인해 주세요."),
+}
+POSTS = [dict(
+    slug="laphroaig-10-friendship-cask", date="2026-11-25", img="laphroaig-friendship-cask",
+    about="Laphroaig 10 Years Old The Friendship Cask (Bourbon Cask #7)",
+    text={
+        "zh": dict(
+            title="Laphroaig 10 年 The Friendship Cask",
+            lead="一支為台灣與韓國兩間酒吧的週年而選的 Laphroaig 單桶。",
+            desc="Laphroaig 2016 蒸餾、2026 裝瓶的 10 年單桶，Bourbon Cask #7，265 瓶，59.5%。為紀念醉俠 The Drunken Master Whisky Bar 10 週年與韓國 Café Swing 6 週年而選，在高雄 Nova Whisky Bar 喝得到。",
+            summary="紀念 The Drunken Master Whisky Bar 10 週年與韓國 Café Swing 6 週年的 Laphroaig 單桶，Bourbon Cask #7，59.5%。",
+            alt="Laphroaig 10 年 The Friendship Cask 酒瓶，酒標為手繪的酒吧空間插畫，背景是 Nova Whisky Bar 的酒架",
+            info=[("酒廠", "Laphroaig"), ("選桶", "The Drunken Master Whisky Bar 10 週年 × Café Swing 6 週年"),
+                  ("蒸餾", "2016/06/09"), ("裝瓶", "2026/07"), ("酒齡", "10 年"), ("桶型", "Bourbon Cask"), ("桶號", "#7"),
+                  ("瓶數", "265 瓶"), ("酒精度", "59.5%")],
+            body=["微涼的天氣，總讓人想來一杯帶著煙燻香氣的泥煤威士忌。",
+                  "今天這瓶 THE FRIENDSHIP CASK Laphroaig 10 年，是為了紀念台灣 The Drunken Master Whisky Bar 10 週年與韓國 Café Swing 6 週年而推出的特別紀念單桶。",
+                  "Café Swing 的老闆喝到樣品時，說這是一款非常美味的 Laphroaig，波本桶帶來的多層次熱帶水果香氣，明亮而華麗地綻放，令人印象深刻。",
+                  "酒標則由 The Drunken Master Whisky Bar 的店長 Elaine 親手繪製，將兩間酒吧的空間與回憶，留在這張特別的紀念酒標上。",
+                  "今晚，這瓶象徵台韓友誼的 Laphroaig 10 年，已經可以在 Nova Whisky Bar 喝到單杯了，讓我們邊喝邊為這兩間酒吧慶祝一下吧！"],
+            notes=[("品飲日期", "2026/11/11 20:05"), ("酒色", "淺琥珀色"),
+                   ("香氣", "剛開始散發柔和的泥煤及煙燻氣息，鹹味、柑橘、鳳梨、蘋果、熱帶果香和些微碘味點綴著，接著是碳烤、黑巧克力、核桃和香草草本，後段是礦物感、薑、薄荷涼感與辛香料"),
+                   ("口感", "中等口感。剛開始有些許鹹味、泥煤、煙燻、柑橘、烤鳳梨、熟果、麥芽、黑巧克力、薑與胡椒"),
+                   ("尾韻", "中等尾韻。俐落的泥煤果香甜味、柑橘、檸檬、些微鹹香、麥芽、堅果、薑、草本、椰子、礦物感與胡椒")]),
+        "en": dict(
+            title="Laphroaig 2016/2026 10YO – The Friendship Cask",
+            lead="A Laphroaig single cask chosen to mark the anniversaries of two bars — one in Taiwan, one in Korea.",
+            desc="A 10-year-old Laphroaig single cask (distilled 2016, bottled 2026; Bourbon Cask #7, 265 bottles, 59.5% ABV) selected for The Drunken Master Whisky Bar's 10th and Café Swing's 6th anniversaries. Pouring at Nova Whisky Bar, Kaohsiung.",
+            summary="A Laphroaig single cask for The Drunken Master Whisky Bar's 10th and Café Swing's 6th anniversaries. Bourbon Cask #7, 59.5% ABV.",
+            alt="Bottle of Laphroaig 10 Years Old The Friendship Cask with a hand-drawn bar interior on the label, in front of the shelves at Nova Whisky Bar",
+            info=[("Distillery", "Laphroaig"), ("Selected for", "The Drunken Master Whisky Bar 10th Anniversary × Café Swing 6th Anniversary"),
+                  ("Distilled", "2016/06/09"), ("Bottled", "2026/07"), ("Age", "10 years"), ("Cask type", "Bourbon Cask"), ("Cask number", "#7"),
+                  ("Bottles", "265"), ("ABV", "59.5%")],
+            body=["A cool evening calls for something smoky.",
+                  "THE FRIENDSHIP CASK is a 10-year-old Laphroaig single cask celebrating the 10th anniversary of The Drunken Master Whisky Bar in Taiwan and the 6th anniversary of Café Swing in Korea.",
+                  "Café Swing's owner called it a truly delicious Laphroaig, praising its bright, layered tropical fruit aromas. The label was hand-drawn by Elaine, manager of The Drunken Master Whisky Bar, capturing both bars and the memories made in them.",
+                  "Now pouring by the glass at Nova Whisky Bar. Come raise a glass to their friendship with us!"],
+            notes=[("Tasted", "2026/11/11 20:05"), ("Colour", "Pale amber"),
+                   ("Nose", "Soft peat smoke, sea salt, citrus, pineapple and tropical fruit, with a touch of iodine. Then charred notes, dark chocolate, walnut, vanilla and herbs, followed by mineral notes, ginger, mint and spice."),
+                   ("Palate", "Medium-bodied. Salt, peat smoke, citrus, grilled pineapple, ripe fruit, malt, dark chocolate, ginger and pepper."),
+                   ("Finish", "Medium. Clean, with sweet, fruity peat smoke, citrus, lemon, light salinity, malt, nuts, ginger, coconut, minerals and pepper.")]),
+        "ja": dict(
+            title="Laphroaig 10年 The Friendship Cask",
+            lead="台湾と韓国、ふたつのバーの周年を記念して選ばれた Laphroaig のシングルカスク。",
+            desc="2016年蒸溜・2026年瓶詰めの Laphroaig 10年シングルカスク（Bourbon Cask #7、265本、59.5%）。The Drunken Master Whisky Bar 10周年と韓国 Café Swing 6周年の記念ボトル。高雄の Nova Whisky Bar で味わえます。",
+            summary="The Drunken Master Whisky Bar 10周年と韓国 Café Swing 6周年を記念した Laphroaig のシングルカスク。Bourbon Cask #7、59.5%。",
+            alt="Laphroaig 10年 The Friendship Cask のボトル。ラベルには手描きのバーのイラスト、背景は Nova Whisky Bar のボトル棚",
+            info=[("蒸溜所", "Laphroaig"), ("セレクト", "The Drunken Master Whisky Bar 10周年 × Café Swing 6周年"),
+                  ("蒸溜", "2016/06/09"), ("瓶詰め", "2026/07"), ("熟成年数", "10年"), ("樽", "Bourbon Cask"), ("樽番号", "#7"),
+                  ("本数", "265本"), ("アルコール度数", "59.5%")],
+            body=["肌寒い夜には、スモーキーなピートウイスキーを。",
+                  "THE FRIENDSHIP CASK Laphroaig 10年は、台湾の The Drunken Master Whisky Bar 10周年と韓国の Café Swing 6周年を記念した特別なシングルカスクです。",
+                  "Café Swingのオーナーも「とてもおいしいラフロイグ」と絶賛。幾重にも広がる、明るく華やかなトロピカルフルーツの香りが印象的です。",
+                  "ラベルは The Drunken Master Whisky Bar の店長 Elaine が、両店の空間と思い出を手描きしました。",
+                  "今夜から Nova Whisky Bar にてグラスでお楽しみいただけます。両店の記念日を一緒にお祝いしましょう！"],
+            notes=[("テイスティング日", "2026/11/11 20:05"), ("色", "淡いアンバー"),
+                   ("香り", "はじめは穏やかなピートとスモーク。塩気、シトラス、パイナップル、リンゴ、トロピカルフルーツにほのかなヨード。続いて炭火のロースト香、ダークチョコレート、クルミ、バニラとハーブ。後半はミネラル、ジンジャー、ミントの清涼感とスパイス"),
+                   ("味わい", "ミディアムボディ。はじめにほのかな塩気、ピート、スモーク、シトラス、焼きパイナップル、熟した果実、モルト、ダークチョコレート、ジンジャー、ペッパー"),
+                   ("余韻", "ミディアム。すっきりとしたピーティーな果実の甘み、シトラス、レモン、ほのかな塩気、モルト、ナッツ、ジンジャー、ハーブ、ココナッツ、ミネラル、ペッパー")]),
+        "ko": dict(
+            title="Laphroaig 10년 The Friendship Cask",
+            lead="대만과 한국, 두 바의 기념일을 위해 고른 Laphroaig 싱글 캐스크.",
+            desc="2016년 증류, 2026년 병입한 Laphroaig 10년 싱글 캐스크(Bourbon Cask #7, 265병, 59.5%). The Drunken Master Whisky Bar 10주년과 한국 Café Swing 6주년 기념 보틀로, 가오슝 Nova Whisky Bar에서 맛볼 수 있습니다.",
+            summary="The Drunken Master Whisky Bar 10주년과 한국 Café Swing 6주년을 기념한 Laphroaig 싱글 캐스크. Bourbon Cask #7, 59.5%.",
+            alt="Laphroaig 10년 The Friendship Cask 보틀. 라벨에 손으로 그린 바 일러스트가 있고, 뒤로 Nova Whisky Bar의 술장이 보인다",
+            info=[("증류소", "Laphroaig"), ("셀렉션", "The Drunken Master Whisky Bar 10주년 × Café Swing 6주년"),
+                  ("증류", "2016/06/09"), ("병입", "2026/07"), ("숙성", "10년"), ("캐스크", "Bourbon Cask"), ("캐스크 번호", "#7"),
+                  ("병 수", "265병"), ("도수", "59.5%")],
+            body=["선선한 날씨에는 스모키한 피트 위스키 한 잔이 절로 생각납니다.",
+                  "오늘 소개할 THE FRIENDSHIP CASK Laphroaig 10년은 대만 The Drunken Master Whisky Bar의 10주년과 한국 Café Swing의 6주년을 기념해 선보이는 특별한 싱글 캐스크입니다.",
+                  "Café Swing 사장님은 샘플을 맛보고 정말 맛있는 Laphroaig라고 하셨습니다. 버번 캐스크에서 숙성된 이 위스키의 다채로운 열대과일 향이 밝고 화려하게 피어나 깊은 인상을 남겼다고 합니다.",
+                  "라벨은 The Drunken Master Whisky Bar의 점장 Elaine이 직접 그렸습니다. 두 바의 공간과 추억을 이 특별한 기념 라벨에 담았습니다.",
+                  "오늘 밤부터 대만과 한국의 우정을 담은 이 Laphroaig 10년을 Nova Whisky Bar에서 잔으로 즐기실 수 있습니다. 한 잔 기울이며 두 바의 기념일을 함께 축하해 주세요!"],
+            notes=[("테이스팅 일시", "2026/11/11 20:05"), ("색", "옅은 앰버"),
+                   ("향", "처음에는 부드러운 피트와 스모키함. 짭조름함, 시트러스, 파인애플, 사과, 열대과일에 은은한 요오드가 더해집니다. 이어서 숯불에 구운 향, 다크 초콜릿, 호두, 바닐라와 허브, 후반에는 미네랄, 생강, 민트의 청량감과 스파이스"),
+                   ("맛", "미디엄 바디. 처음에는 약간의 짭조름함, 피트, 스모키함, 시트러스, 구운 파인애플, 잘 익은 과일, 몰트, 다크 초콜릿, 생강, 후추"),
+                   ("피니시", "미디엄. 깔끔한 피트와 과일의 단맛, 시트러스, 레몬, 은은한 짭조름함, 몰트, 견과류, 생강, 허브, 코코넛, 미네랄, 후추")]),
+    },
+)]
+
+def journal_url(lang):
+    return BASE + L[lang]["path"] + "journal/"
+
+def post_url(p, lang):
+    return journal_url(lang) + p["slug"] + "/"
+
+def articles_for(lang):
+    """文章列表：站內四語文章在前，舊的外部文章（只有繁中）在後。"""
+    out = [dict(url=post_url(p, lang), title=p["text"][lang]["title"], summary=p["text"][lang]["summary"]) for p in POSTS if lang in p["text"]]
+    if lang == "zh":
+        out += ARTICLES
+    return out
 
 
 # 品酒會：活動結束後把 "past" 改成 True，或整筆移到過往活動
@@ -504,14 +609,18 @@ def faq_schema(lang, page_url):
         {"@type": "Question", "name": strip(html.unescape(q)),
          "acceptedAnswer": {"@type": "Answer", "text": strip(html.unescape(fill(a, lang)))}} for q, a in faq_items(lang)]}
 
-def head(lang, title, desc, canonical, schema_graph, alternates=True, noindex=False):
+def head(lang, title, desc, canonical, schema_graph, alternates=True, noindex=False, og=None):
+    """alternates：True＝各語首頁；dict＝{lang: url} 這一頁的各語版本；False＝不加。
+    og：文章頁用 dict(img=, w=, h=, type="article")。"""
     d = L[lang]
     alt = ""
     if alternates:
-        alt = "".join(f'<link rel="alternate" hreflang="{HREFLANG[l]}" href="{url_of(l)}">\n' for l in LANGS)
-        alt += f'<link rel="alternate" hreflang="x-default" href="{BASE}">\n'
+        urls = alternates if isinstance(alternates, dict) else {l: url_of(l) for l in LANGS}
+        alt = "".join(f'<link rel="alternate" hreflang="{HREFLANG[l]}" href="{u}">\n' for l, u in urls.items())
+        alt += f'<link rel="alternate" hreflang="x-default" href="{urls.get("zh", BASE)}">\n'
     robots = '<meta name="robots" content="noindex">\n' if noindex else '<meta name="robots" content="index, follow, max-image-preview:large">\n'
     ld = json.dumps({"@context": "https://schema.org", "@graph": schema_graph}, ensure_ascii=False, indent=1)
+    og = og or dict(img=OG_IMG, w=1200, h=630, type="website")
     return f"""<!DOCTYPE html>
 <html lang="{d['html_lang']}">
 <head>
@@ -522,19 +631,19 @@ def head(lang, title, desc, canonical, schema_graph, alternates=True, noindex=Fa
 {robots}<meta name="google-site-verification" content="{GSC_VERIFY}">
 <link rel="canonical" href="{canonical}">
 {alt}<meta name="theme-color" content="#F6F4EF">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{og['type']}">
 <meta property="og:site_name" content="Nova Whisky Bar 新星威士忌酒館">
 <meta property="og:title" content="{html.escape(title)}">
 <meta property="og:description" content="{html.escape(desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{OG_IMG}">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="{og['img']}">
+<meta property="og:image:width" content="{og['w']}">
+<meta property="og:image:height" content="{og['h']}">
 <meta property="og:locale" content="{d['og_locale']}">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="{html.escape(title)}">
 <meta name="twitter:description" content="{html.escape(desc)}">
-<meta name="twitter:image" content="{OG_IMG}">
+<meta name="twitter:image" content="{og['img']}">
 <link rel="icon" href="{BASE}assets/favicon.svg" type="image/svg+xml">
 <link rel="icon" href="{BASE}assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="apple-touch-icon" href="{BASE}assets/apple-touch-icon.png">
@@ -556,7 +665,7 @@ def age_gate(lang):
 if(!ok){{g.hidden=false}}document.getElementById('ag-yes').onclick=function(){{try{{localStorage.setItem('nova_age_ok','1')}}catch(e){{}}g.hidden=true}};}})();</script>
 """
 
-def header(lang, is_home=False):
+def header(lang, is_home=False, alt_urls=None):
     d = L[lang]
     def href(h):
         if h.startswith("#"):
@@ -565,7 +674,8 @@ def header(lang, is_home=False):
             return BASE + h[3:]
         return BASE + h
     nav = "".join(f'<a href="{href(h)}">{t}</a>' for h, t in d["nav"])
-    langs = "".join(f'<a href="{url_of(l)}" hreflang="{HREFLANG[l]}"{" aria-current=\"true\"" if l == lang else ""}>{L[l]["lang_name"]}</a>' for l in LANGS)
+    alt_urls = alt_urls or {}
+    langs = "".join(f'<a href="{alt_urls.get(l, url_of(l))}" hreflang="{HREFLANG[l]}"{" aria-current=\"true\"" if l == lang else ""}>{L[l]["lang_name"]}</a>' for l in LANGS)
     return f"""<header class="top"><div class="wrap bar"><a class="brand" href="{url_of(lang)}"><img class="bm" src="{BASE}assets/logo-mark.svg" alt="" width="30" height="34"><img class="be" src="{BASE}assets/logo-en.svg" alt="Nova Whisky Bar 新星威士忌酒館" width="132" height="37"><span class="badge">22.6°N · Kaohsiung</span></a>
 <nav class="nav" aria-label="Main">{nav}</nav><nav class="langs" aria-label="Language">{langs}</nav></div></header>
 """
@@ -637,14 +747,13 @@ def home(lang):
     soc = "".join(f'<a class="btn ghost" href="{u}">{n}</a>' for n, u in socials())
     family = "".join(f'<li><strong>{t}</strong><span>{p}</span></li>' for t, p in d["family"])
     side = "".join(f"<p>{s}</p>" for s in d["side"])
+    arts = "".join(f'<li><a href="{a["url"]}">{html.escape(a["title"])}</a><span>{html.escape(a["summary"])}</span></li>' for a in articles_for(lang))
+    journal_block = sect("journal", d["journal_k"], d["journal_h"], f'<ul class="list">{arts}</ul><p><a class="more" href="journal/">{d["journal_more"]} →</a></p>') if arts else ""
     if lang == "zh":
         faq_inner = faq_html(lang, 6) + f'<p><a class="more" href="faq/">{d["faq_more"]} →</a></p>'
-        arts = "".join(f'<li><a href="{a["url"]}">{html.escape(a["title"])}</a><span>{a["summary"]}</span></li>' for a in ARTICLES)
-        journal_block = sect("journal", d["journal_k"], d["journal_h"], f'<ul class="list">{arts}</ul><p><a class="more" href="journal/">{d["journal_more"]} →</a></p>')
         faq_href = "faq/"
     else:
         faq_inner = faq_html(lang)
-        journal_block = ""
         faq_href = "#faq"
     body = f"""<body>
 {age_gate(lang)}{header(lang, True)}<main id="main">
@@ -667,10 +776,10 @@ def home(lang):
 """
     return head(lang, d["title"], d["desc"], page, graph) + body
 
-def simple_page(lang, crumb, h1, lead, inner):
+def simple_page(lang, crumb, h1, lead, inner, alt_urls=None):
     return f"""<body>
-{age_gate(lang)}{header(lang)}<main id="main"><section class="band"><div class="wrap narrow">
-<p class="crumb"><a href="{BASE}">Nova Whisky Bar</a> / {crumb}</p>
+{age_gate(lang)}{header(lang, alt_urls=alt_urls)}<main id="main"><section class="band"><div class="wrap narrow">
+<p class="crumb"><a href="{url_of(lang)}">Nova Whisky Bar</a> / {crumb}</p>
 <h1 class="page">{h1}</h1><p class="lead">{lead}</p>
 {inner}
 </div></section></main>
@@ -689,29 +798,75 @@ def faq_page():
     body = simple_page(lang, "常見問題", "常見問題", "關於 Nova Whisky Bar 新星威士忌酒館，第一次來的客人最常問的幾件事。", f'<div class="faq">{faq_html(lang)}</div>')
     return head(lang, title, desc, page, graph, alternates=False) + body
 
-def journal_page():
-    lang = "zh"
-    page = BASE + "journal/"
-    title = "文章與品飲紀錄｜Nova Whisky Bar 新星威士忌酒館"
-    desc = "Nova Whisky Bar 新星威士忌酒館的威士忌文章與【座標 22.6N｜新星亮這杯】品飲紀錄：酒廠故事、桶型知識與獨立裝瓶單桶。"
-    arts = "".join(f'<li><a href="{a["url"]}">{html.escape(a["title"])}</a><span>{a["summary"]}</span></li>' for a in ARTICLES)
-    graph = [{"@type": "CollectionPage", "@id": page, "url": page, "name": title, "inLanguage": "zh-TW",
+JOURNAL_UI = {
+    "zh": dict(title="文章與品飲紀錄｜Nova Whisky Bar 新星威士忌酒館",
+               desc="Nova Whisky Bar 新星威士忌酒館的威士忌文章與【座標 22.6°N｜新星亮這杯】品飲紀錄：酒廠故事、桶型知識與獨立裝瓶單桶。",
+               h1="文章與品飲紀錄", lead="【座標 22.6°N｜新星亮這杯】與 Nova 的威士忌知識整理。新文章會陸續從社群搬過來。"),
+    "en": dict(title="Journal & Tasting Notes | Nova Whisky Bar, Kaohsiung",
+               desc="Whisky articles and 22.6°N | Nova in the Glass tasting notes from Nova Whisky Bar in Kaohsiung, Taiwan: distillery stories, casks and independent single casks.",
+               h1="Journal", lead="22.6°N | Nova in the Glass — tasting notes and whisky stories from Nova, in English."),
+    "ja": dict(title="記事・テイスティングノート｜Nova Whisky Bar 新星威士忌酒館（高雄）",
+               desc="台湾・高雄の Nova Whisky Bar によるウイスキー記事とテイスティングノート「22.6°N | Nova in the Glass」。蒸溜所の物語、樽、独立瓶詰めのシングルカスク。",
+               h1="記事", lead="テイスティングノート「22.6°N | Nova in the Glass」とウイスキーの話を、日本語でお届けします。"),
+    "ko": dict(title="글・테이스팅 노트｜Nova Whisky Bar 新星威士忌酒館 (가오슝)",
+               desc="대만 가오슝 Nova Whisky Bar의 위스키 글과 테이스팅 노트 「22.6°N | Nova in the Glass」. 증류소 이야기, 캐스크, 독립 병입 싱글 캐스크.",
+               h1="글", lead="테이스팅 노트 「22.6°N | Nova in the Glass」와 위스키 이야기를 한국어로 전합니다."),
+}
+
+def journal_page(lang="zh"):
+    page = journal_url(lang)
+    j = JOURNAL_UI[lang]
+    items = articles_for(lang)
+    arts = "".join(f'<li><a href="{a["url"]}">{html.escape(a["title"])}</a><span>{html.escape(a["summary"])}</span></li>' for a in items)
+    graph = [{"@type": "CollectionPage", "@id": page, "url": page, "name": j["title"], "inLanguage": L[lang]["html_lang"],
               "isPartOf": {"@id": BASE + "#site"}, "about": {"@id": BASE + "#bar"},
-              "hasPart": [{"@type": "Article", "headline": a["title"], "url": a["url"]} for a in ARTICLES]}]
-    body = simple_page(lang, "文章", "文章與品飲紀錄", "【座標 22.6N｜新星亮這杯】與 Nova 的威士忌知識整理。新文章會陸續從社群搬過來。", f'<ul class="list">{arts}</ul>')
-    return head(lang, title, desc, page, graph, alternates=False) + body
+              "hasPart": [{"@type": "Article", "headline": a["title"], "url": a["url"]} for a in items]}]
+    alts = {l: journal_url(l) for l in LANGS}
+    body = simple_page(lang, POST_UI[lang]["crumb"], j["h1"], j["lead"], f'<ul class="list">{arts}</ul>', alt_urls=alts)
+    return head(lang, j["title"], j["desc"], page, graph, alternates=alts) + body
+
+def post_page(p, lang):
+    t = p["text"][lang]; ui = POST_UI[lang]
+    page = post_url(p, lang)
+    title = f"【{SERIES[lang]}】{t['title']}｜Nova Whisky Bar" + (" 新星威士忌酒館" if lang == "zh" else "")
+    img = p["img"]; big = f"{BASE}assets/{img}-1080.jpg"
+    alts = {l: post_url(p, l) for l in LANGS if l in p["text"]}
+    graph = [{"@type": "BlogPosting", "@id": page + "#post", "headline": t["title"], "description": t["desc"],
+              "inLanguage": L[lang]["html_lang"], "url": page,
+              "datePublished": p["date"], "dateModified": p["date"], "image": [big],
+              "author": {"@type": "Person", "name": "醉郭", "alternateName": "Drunken Kuo", "url": "https://www.instagram.com/drunkenkuo/"},
+              "publisher": {"@id": BASE + "#bar"}, "about": {"@type": "Thing", "name": p["about"]},
+              "isPartOf": {"@id": journal_url(lang)}, "mainEntityOfPage": page},
+             {"@type": "BreadcrumbList", "itemListElement": [
+                 {"@type": "ListItem", "position": 1, "name": "Nova Whisky Bar", "item": url_of(lang)},
+                 {"@type": "ListItem", "position": 2, "name": ui["crumb"], "item": journal_url(lang)},
+                 {"@type": "ListItem", "position": 3, "name": t["title"], "item": page}]}]
+    info = "".join(f"<div><dt>{html.escape(k)}</dt><dd>{html.escape(v)}</dd></div>" for k, v in t["info"])
+    notes = "".join(f"<div><dt>{html.escape(k)}</dt><dd>{html.escape(v)}</dd></div>" for k, v in t["notes"])
+    body_p = "".join(f"<p>{html.escape(x)}</p>" for x in t["body"])
+    inner = f"""<p class="k">{SERIES[lang]}</p><p class="meta"><time datetime="{p['date']}">{p['date'].replace('-', '/')}</time>・{ui['by']}</p>
+<figure class="post-fig"><picture><source type="image/webp" srcset="{BASE}assets/{img}-720.webp 720w, {BASE}assets/{img}-1080.webp 1080w" sizes="(max-width:600px) 92vw, 460px"><img src="{big}" srcset="{BASE}assets/{img}-720.jpg 720w, {big} 1080w" sizes="(max-width:600px) 92vw, 460px" width="1080" height="1350" alt="{html.escape(t['alt'])}" fetchpriority="high"></picture><figcaption>{html.escape(ui['fig'])}</figcaption></figure>
+<dl class="info">{info}</dl>
+<div class="article">{body_p}</div>
+<h2 class="post-h">{ui['notes_h']}</h2>
+<dl class="info notes">{notes}</dl>
+<p class="closing">{html.escape(ui['closing'])}</p>"""
+    crumb = f'<a href="{journal_url(lang)}">{ui["crumb"]}</a> / {html.escape(t["title"])}'
+    body = simple_page(lang, crumb, html.escape(t["title"]), html.escape(t["lead"]), inner, alt_urls=alts)
+    og = dict(img=big, w=1080, h=1350, type="article")
+    return head(lang, title, t["desc"], page, graph, alternates=alts, og=og) + body
 
 def article_template():
     lang = "zh"
     page = BASE + "journal/SLUG/"
-    title = "【座標 22.6N｜新星亮這杯】酒款名稱｜Nova Whisky Bar 新星威士忌酒館"
+    title = "【座標 22.6°N｜新星亮這杯】酒款名稱｜Nova Whisky Bar 新星威士忌酒館"
     desc = "（一句話描述這支酒：酒廠、年份、桶型、裝瓶商，與 Nova 的品飲重點。120 字內。）"
     graph = [{"@type": "BlogPosting", "headline": "酒款名稱", "inLanguage": "zh-TW", "url": page,
               "datePublished": "YYYY-MM-DD", "dateModified": "YYYY-MM-DD", "image": OG_IMG,
               "author": {"@type": "Person", "name": "醉郭"},
               "publisher": {"@id": BASE + "#bar"}, "about": {"@type": "Thing", "name": "酒款名稱"},
               "mainEntityOfPage": page}]
-    inner = """<p class="k">座標 22.6N｜新星亮這杯</p><p class="meta"><time datetime="YYYY-MM-DD">YYYY-MM-DD</time>・醉郭</p>
+    inner = """<p class="k">座標 22.6°N｜新星亮這杯</p><p class="meta"><time datetime="YYYY-MM-DD">YYYY-MM-DD</time>・醉郭</p>
 <dl class="info"><div><dt>酒廠</dt><dd>—</dd></div><div><dt>裝瓶商</dt><dd>—</dd></div><div><dt>年份／酒齡</dt><dd>—</dd></div><div><dt>桶型／桶號</dt><dd>—</dd></div><div><dt>酒精度</dt><dd>—</dd></div><div><dt>瓶數</dt><dd>—</dd></div></dl>
 <div class="article"><p>（貼上社群的繁中文案正文，段落照原樣分開即可。）</p><p class="beat">（關鍵轉折的單行短句）</p><p>（品飲描述）</p>
 <p>這杯在高雄苓雅的 Nova Whisky Bar 新星威士忌酒館喝得到，數量有限，以現場為準。</p></div>"""
@@ -730,8 +885,15 @@ def sitemap():
         alts = "".join(f'<xhtml:link rel="alternate" hreflang="{HREFLANG[x]}" href="{url_of(x)}"/>' for x in LANGS)
         alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{BASE}"/>'
         urls.append(f"<url><loc>{url_of(l)}</loc><lastmod>{UPDATED}</lastmod>{alts}</url>")
-    for p in ("faq/", "journal/"):
-        urls.append(f"<url><loc>{BASE}{p}</loc><lastmod>{UPDATED}</lastmod></url>")
+    urls.append(f"<url><loc>{BASE}faq/</loc><lastmod>{UPDATED}</lastmod></url>")
+    def group(pages, lastmod):
+        alts = "".join(f'<xhtml:link rel="alternate" hreflang="{HREFLANG[x]}" href="{u}"/>' for x, u in pages.items())
+        alts += f'<xhtml:link rel="alternate" hreflang="x-default" href="{pages.get("zh", next(iter(pages.values())))}"/>'
+        for u in pages.values():
+            urls.append(f"<url><loc>{u}</loc><lastmod>{lastmod}</lastmod>{alts}</url>")
+    group({l: journal_url(l) for l in LANGS}, UPDATED)
+    for p in POSTS:
+        group({l: post_url(p, l) for l in LANGS if l in p["text"]}, p["date"])
     for a in ARTICLES:
         if a["url"].startswith(BASE):
             urls.append(f"<url><loc>{a['url']}</loc></url>")
@@ -750,7 +912,12 @@ def llms():
         return v if v else "（尚未提供）"
     faq_lines = "\n".join(f"- {strip(html.unescape(q))}：{strip(html.unescape(fill(a, 'zh')))}" for q, a in faq_items("zh"))
     faq_lines = re.sub(r"【待填：[^】]+】", "（尚未提供）", faq_lines)
-    arts = "\n".join(f"- [{a['title']}]({a['url']})：{a['summary']}" for a in ARTICLES)
+    arts = "\n".join(f"- [{a['title']}]({a['url']})：{a['summary']}" for a in articles_for("zh"))
+    langname = {"en": "English", "ja": "日本語", "ko": "한국어"}
+    for p in POSTS:
+        others = "、".join(f"[{langname[l]}]({post_url(p, l)})" for l in ("en", "ja", "ko") if l in p["text"])
+        if others:
+            arts = arts.replace(f"({post_url(p, 'zh')})：{p['text']['zh']['summary']}", f"({post_url(p, 'zh')})：{p['text']['zh']['summary']}（{others}）")
     soc = "\n".join(f"- {n}：{u}" for n, u in socials())
     extra = "".join(f"- {lab}：{FACTS[k]['zh']}\n" for k, lab in [("price","消費方式"),("language","外語服務"),("payment","付款方式"),("bottles","酒款數量")] if FACTS[k]["zh"])
     return f"""# Nova Whisky Bar 新星威士忌酒館
@@ -784,7 +951,7 @@ def llms():
 - [English]({BASE}en/)
 - [日本語]({BASE}ja/)
 - [한국어]({BASE}ko/)
-- [文章與品飲紀錄]({BASE}journal/)
+- [文章與品飲紀錄]({BASE}journal/)（[English]({BASE}en/journal/)、[日本語]({BASE}ja/journal/)、[한국어]({BASE}ko/journal/)）
 
 ## 常見問題
 {faq_lines}
@@ -863,6 +1030,10 @@ summary:hover .qt{color:var(--whisky)}details p{margin:0 0 20px;padding-left:34p
 .lineup-h{font-family:var(--display);font-style:italic;color:var(--whisky);font-size:17px;margin:24px 0 6px}.lg{margin:14px 0 4px;font-size:13px;color:var(--stone);letter-spacing:.04em}
 .lineup ol{margin:0;padding:0;list-style:none;border-top:1px solid var(--line)}.lineup li{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
 .meta2{color:var(--stone);white-space:nowrap}.ev-body .btns{margin-top:22px}
+.post-fig{margin:30px 0 34px;text-align:center}.post-fig img{display:block;width:100%;max-width:460px;height:auto;aspect-ratio:1080/1350;margin:0 auto;border-radius:2px;background:#2a241d}
+.post-fig figcaption{margin:10px auto 0;max-width:460px;font-size:12px;color:var(--stone);letter-spacing:.04em;line-height:1.7}
+.article{margin-top:32px}.post-h{font-family:var(--serif);font-size:22px;letter-spacing:.04em;margin:44px 0 16px}
+.notes>div{grid-template-columns:7em minmax(0,1fr)}.closing{margin:28px 0 0;padding-left:14px;border-left:2px solid var(--whisky);font-size:14px;color:var(--stone)}
 h1.page{font-family:var(--serif);font-size:clamp(30px,4.6vw,44px);letter-spacing:.04em;margin:10px 0 6px}
 .todo{background:#FBE3E0;color:#8A1F17;border:1px dashed #C8483D;padding:0 6px;border-radius:2px;font-size:.92em;font-weight:400}
 .foot{border-top:1px solid var(--line);padding:40px 0 56px;font-size:13px;color:var(--stone)}
@@ -896,7 +1067,11 @@ def build(out="site", base=None):
     for l in LANGS:
         w(L[l]["path"] + "index.html", home(l))
     w("faq/index.html", faq_page())
-    w("journal/index.html", journal_page())
+    for l in LANGS:
+        w(L[l]["path"] + "journal/index.html", journal_page(l))
+        for p in POSTS:
+            if l in p["text"]:
+                w(L[l]["path"] + "journal/" + p["slug"] + "/index.html", post_page(p, l))
     w("journal/_template/index.html", article_template())
     w("404.html", page_404())
     w("sitemap.xml", sitemap())

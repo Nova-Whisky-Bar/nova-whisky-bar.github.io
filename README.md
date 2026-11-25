@@ -22,10 +22,14 @@
 
 ## 新增品飲紀錄文章
 
-1. 複製 `journal/_template/` 資料夾，改名為酒款英文代稱，例如 `journal/smws-53-496/`。
-2. 打開 `index.html`，把「酒款名稱」「YYYY-MM-DD」「SLUG」全部替換，貼上 IG 繁中文案。
-3. 刪掉 `<meta name="robots" content="noindex">` 這一行。
-4. 在 `journal/index.html` 的清單加上一筆連結，在 `sitemap.xml` 加上一筆網址。
+文章由 `_source/build.py` 的 `POSTS` 產生，四語各一頁並互相對應（hreflang）：
+`journal/SLUG/`、`en/journal/SLUG/`、`ja/journal/SLUG/`、`ko/journal/SLUG/`。
+
+1. 酒瓶照片（直式 1080×1350）轉成 `assets/SLUG-720.jpg／.webp` 與 `assets/SLUG-1080.jpg／.webp`。
+2. 在 `POSTS` 最上方新增一筆：slug、日期、照片前綴，以及四語的標題、導言、描述、酒款資料、文案段落、品飲紀錄。
+   欄位格式參考 `journal/_template/` 與既有文章；沒有資料的欄位就不要寫。
+3. 執行 `python3 build.py`，把輸出的 `site/` 內容複製到 repository 根目錄。
+   各語文章列表、首頁文章區塊、sitemap.xml、llms.txt 會一起更新。
 
 ## 之後若購買網域
 
