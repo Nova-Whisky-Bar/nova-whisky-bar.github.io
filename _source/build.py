@@ -401,7 +401,7 @@ POST_UI = {
                closing="이 위스키는 가오슝 링야구의 Nova Whisky Bar에서 맛보실 수 있습니다. 수량이 한정되어 있으니 재고는 매장에서 확인해 주세요."),
 }
 POSTS = [dict(
-    slug="glenrothes-2000-single-cask-2364", date="2026-11-25", img="glenrothes-2000-2364",
+    slug="glenrothes-2000-single-cask-2364", date="2026-11-22", img="glenrothes-2000-2364",
     about="The Glenrothes 2000 Single Cask #2364 (Sherry Butt)",
     text={
         "zh": dict(
@@ -468,7 +468,7 @@ POSTS = [dict(
                    ("피니시", "미디엄 롱. 건포도, 말린 과일, 시트러스, 다크 초콜릿, 은은한 캐러멜, 호두, 오크, 가죽, 카다멈, 후추")]),
     },
 ), dict(
-    slug="laphroaig-10-friendship-cask", date="2026-11-25", img="laphroaig-friendship-cask",
+    slug="laphroaig-10-friendship-cask", date="2026-11-11", img="laphroaig-friendship-cask",
     about="Laphroaig 10 Years Old The Friendship Cask (Bourbon Cask #7)",
     text={
         "zh": dict(
