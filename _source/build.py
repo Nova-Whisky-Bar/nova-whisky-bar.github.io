@@ -555,9 +555,16 @@ def journal_url(lang):
 def post_url(p, lang):
     return journal_url(lang) + p["slug"] + "/"
 
+def date_tag(d):
+    """頁面上顯示的日期：2026/11/22（datetime 保留 ISO 格式）。"""
+    return f'<time datetime="{d}">{d.replace("-", "/")}</time>' if d else ""
+
+def article_li(a):
+    return f'<li><a href="{a["url"]}">{html.escape(a["title"])}</a>{date_tag(a.get("date"))}<span>{html.escape(a["summary"])}</span></li>'
+
 def articles_for(lang):
     """文章列表：站內四語文章在前，舊的外部文章（只有繁中）在後。"""
-    out = [dict(url=post_url(p, lang), title=p["text"][lang]["title"], summary=p["text"][lang]["summary"]) for p in POSTS if lang in p["text"]]
+    out = [dict(url=post_url(p, lang), title=p["text"][lang]["title"], summary=p["text"][lang]["summary"], date=p["date"]) for p in POSTS if lang in p["text"]]
     if lang == "zh":
         out += ARTICLES
     return out
@@ -818,7 +825,7 @@ def home(lang):
     soc = "".join(f'<a class="btn ghost" href="{u}">{n}</a>' for n, u in socials())
     family = "".join(f'<li><strong>{t}</strong><span>{p}</span></li>' for t, p in d["family"])
     side = "".join(f"<p>{s}</p>" for s in d["side"])
-    arts = "".join(f'<li><a href="{a["url"]}">{html.escape(a["title"])}</a><span>{html.escape(a["summary"])}</span></li>' for a in articles_for(lang))
+    arts = "".join(article_li(a) for a in articles_for(lang))
     journal_block = sect("journal", d["journal_k"], d["journal_h"], f'<ul class="list">{arts}</ul><p><a class="more" href="journal/">{d["journal_more"]} →</a></p>') if arts else ""
     if lang == "zh":
         faq_inner = faq_html(lang, 6) + f'<p><a class="more" href="faq/">{d["faq_more"]} →</a></p>'
@@ -888,10 +895,10 @@ def journal_page(lang="zh"):
     page = journal_url(lang)
     j = JOURNAL_UI[lang]
     items = articles_for(lang)
-    arts = "".join(f'<li><a href="{a["url"]}">{html.escape(a["title"])}</a><span>{html.escape(a["summary"])}</span></li>' for a in items)
+    arts = "".join(article_li(a) for a in items)
     graph = [{"@type": "CollectionPage", "@id": page, "url": page, "name": j["title"], "inLanguage": L[lang]["html_lang"],
               "isPartOf": {"@id": BASE + "#site"}, "about": {"@id": BASE + "#bar"},
-              "hasPart": [{"@type": "Article", "headline": a["title"], "url": a["url"]} for a in items]}]
+              "hasPart": [dict({"@type": "Article", "headline": a["title"], "url": a["url"]}, **({"datePublished": a["date"]} if a.get("date") else {})) for a in items]}]
     alts = {l: journal_url(l) for l in LANGS}
     body = simple_page(lang, POST_UI[lang]["crumb"], j["h1"], j["lead"], f'<ul class="list">{arts}</ul>', alt_urls=alts)
     return head(lang, j["title"], j["desc"], page, graph, alternates=alts) + body
@@ -915,7 +922,7 @@ def post_page(p, lang):
     info = "".join(f"<div><dt>{html.escape(k)}</dt><dd>{html.escape(v)}</dd></div>" for k, v in t["info"])
     notes = "".join(f"<div><dt>{html.escape(k)}</dt><dd>{html.escape(v)}</dd></div>" for k, v in t["notes"])
     body_p = "".join(f"<p>{html.escape(x)}</p>" for x in t["body"])
-    inner = f"""<p class="k">{SERIES[lang]}</p>
+    inner = f"""<p class="k">{SERIES[lang]}</p><p class="meta">{date_tag(p['date'])}</p>
 <figure class="post-fig"><picture><source type="image/webp" srcset="{BASE}assets/{img}-720.webp 720w, {BASE}assets/{img}-1080.webp 1080w" sizes="(max-width:600px) 92vw, 460px"><img src="{big}" srcset="{BASE}assets/{img}-720.jpg 720w, {big} 1080w" sizes="(max-width:600px) 92vw, 460px" width="1080" height="1350" alt="{html.escape(t['alt'])}" fetchpriority="high"></picture>{('<figcaption>' + html.escape(t['fig']) + '</figcaption>') if t.get('fig') else ''}</figure>
 <dl class="info">{info}</dl>
 <div class="article">{body_p}</div>
@@ -937,7 +944,7 @@ def article_template():
               "author": {"@type": "Person", "name": "醉郭"},
               "publisher": {"@id": BASE + "#bar"}, "about": {"@type": "Thing", "name": "酒款名稱"},
               "mainEntityOfPage": page}]
-    inner = """<p class="k">座標 22.6°N｜新星亮這杯</p>
+    inner = """<p class="k">座標 22.6°N｜新星亮這杯</p><p class="meta"><time datetime="YYYY-MM-DD">YYYY/MM/DD</time></p>
 <dl class="info"><div><dt>酒廠</dt><dd>—</dd></div><div><dt>裝瓶商</dt><dd>—</dd></div><div><dt>年份／酒齡</dt><dd>—</dd></div><div><dt>桶型／桶號</dt><dd>—</dd></div><div><dt>酒精度</dt><dd>—</dd></div><div><dt>瓶數</dt><dd>—</dd></div></dl>
 <div class="article"><p>（貼上社群的繁中文案正文，段落照原樣分開即可。）</p><p class="beat">（關鍵轉折的單行短句）</p><p>（品飲描述）</p>
 <p>這杯在高雄苓雅的 Nova Whisky Bar 新星威士忌酒館喝得到，數量有限，以現場為準。</p></div>"""
@@ -1093,7 +1100,7 @@ summary::after{content:"＋";margin-left:auto;color:var(--stone);font-size:14px}
 .qn{font-family:var(--display);color:var(--whisky);font-size:15px;flex:none}.qt{font-family:var(--serif);font-size:17px;font-weight:400;line-height:1.6}
 summary:hover .qt{color:var(--whisky)}details p{margin:0 0 20px;padding-left:34px;font-size:15px;color:rgba(26,25,23,.85)}
 .list{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}.list li{padding:16px 0;border-bottom:1px solid var(--line)}
-.list strong,.list a{display:block;font-family:var(--serif);font-weight:500}.list span{color:var(--stone);font-size:15px}
+.list strong,.list a{display:block;font-family:var(--serif);font-weight:500}.list span{color:var(--stone);font-size:15px}.list time{display:block;color:var(--stone);font-size:13px;letter-spacing:.04em;margin:2px 0 4px}
 .news{list-style:none;padding:0;margin:20px 0 0}.news li{display:flex;gap:16px;padding:12px 0;border-top:1px solid var(--line)}.news time{color:var(--whisky);font-size:13px;flex:none;padding-top:2px}
 .more{display:inline-block;margin-top:18px}
 .event{border:1px solid var(--line);background:var(--paper);margin-top:26px}.event img{display:block;width:100%;height:auto;aspect-ratio:1600/837;background:#1a1714}
