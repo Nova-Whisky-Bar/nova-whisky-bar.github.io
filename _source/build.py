@@ -747,6 +747,20 @@ def articles_for(lang):
         out += ARTICLES
     return out
 
+HOME_POSTS = 3   # 首頁「文章」區塊只放最新幾篇，其餘看文章頁
+KNOW_H = {"zh": "威士忌知識", "en": "Whisky notes", "ja": "ウイスキーの話", "ko": "위스키 이야기"}
+
+def post_card(p, lang):
+    """有酒瓶照片的文章卡片（首頁與文章頁共用）。照片旁已有標題，所以 alt 留空。"""
+    t = p["text"][lang]; img = p["img"]
+    return (f'<li><a href="{post_url(p, lang)}"><picture><source type="image/webp" srcset="{BASE}assets/{img}-720.webp">'
+            f'<img src="{BASE}assets/{img}-720.jpg" width="720" height="900" alt="" loading="lazy"></picture>'
+            f'{date_tag(p["date"])}<span class="ct">{html.escape(t["title"])}</span></a></li>')
+
+def post_cards(lang, limit=None, cls="cards"):
+    ps = [p for p in POSTS if lang in p["text"]][:limit]
+    return f'<ul class="{cls}">' + "".join(post_card(p, lang) for p in ps) + "</ul>" if ps else ""
+
 
 # 品酒會：活動結束後把 "past" 改成 True，或整筆移到過往活動
 LINEUP = [
@@ -1003,8 +1017,8 @@ def home(lang):
     soc = "".join(f'<a class="btn ghost" href="{u}">{n}</a>' for n, u in socials())
     family = "".join(f'<li><strong>{t}</strong><span>{p}</span></li>' for t, p in d["family"])
     side = "".join(f"<p>{s}</p>" for s in d["side"])
-    arts = "".join(article_li(a) for a in articles_for(lang))
-    journal_block = sect("journal", d["journal_k"], d["journal_h"], f'<ul class="list">{arts}</ul><p><a class="more" href="journal/">{d["journal_more"]} →</a></p>') if arts else ""
+    arts = post_cards(lang, HOME_POSTS, "cards scroll")
+    journal_block = sect("journal", d["journal_k"], d["journal_h"], f'{arts}<p><a class="more" href="journal/">{d["journal_more"]} →</a></p>') if arts else ""
     if lang == "zh":
         faq_inner = faq_html(lang, 6) + f'<p><a class="more" href="faq/">{d["faq_more"]} →</a></p>'
         faq_href = "faq/"
@@ -1073,12 +1087,14 @@ def journal_page(lang="zh"):
     page = journal_url(lang)
     j = JOURNAL_UI[lang]
     items = articles_for(lang)
-    arts = "".join(article_li(a) for a in items)
+    arts = f'<h2 class="post-h">{POST_UI[lang]["notes_h"]}</h2>' + post_cards(lang)
+    if lang == "zh" and ARTICLES:
+        arts += f'<h2 class="post-h">{KNOW_H[lang]}</h2><ul class="list">' + "".join(article_li(a) for a in ARTICLES) + "</ul>"
     graph = [{"@type": "CollectionPage", "@id": page, "url": page, "name": j["title"], "inLanguage": L[lang]["html_lang"],
               "isPartOf": {"@id": BASE + "#site"}, "about": {"@id": BASE + "#bar"},
               "hasPart": [dict({"@type": "Article", "headline": a["title"], "url": a["url"]}, **({"datePublished": a["date"]} if a.get("date") else {})) for a in items]}]
     alts = {l: journal_url(l) for l in LANGS}
-    body = simple_page(lang, POST_UI[lang]["crumb"], j["h1"], j["lead"], f'<ul class="list">{arts}</ul>', alt_urls=alts)
+    body = simple_page(lang, POST_UI[lang]["crumb"], j["h1"], j["lead"], arts, alt_urls=alts)
     return head(lang, j["title"], j["desc"], page, graph, alternates=alts) + body
 
 def post_page(p, lang):
@@ -1281,6 +1297,10 @@ summary:hover .qt{color:var(--whisky)}details p{margin:0 0 20px;padding-left:34p
 .list strong,.list a{display:block;font-family:var(--serif);font-weight:500}.list span{color:var(--stone);font-size:15px}.list time{display:block;color:var(--stone);font-size:13px;letter-spacing:.04em;margin:2px 0 4px}
 .news{list-style:none;padding:0;margin:20px 0 0}.news li{display:flex;gap:16px;padding:12px 0;border-top:1px solid var(--line)}.news time{color:var(--whisky);font-size:13px;flex:none;padding-top:2px}
 .more{display:inline-block;margin-top:18px}
+.cards{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 22px}
+.cards a{display:block;color:inherit;text-decoration:none}.cards img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:2px;background:#2a241d;transition:opacity .3s}
+.cards a:hover img{opacity:.88}.cards a:hover .ct{color:var(--whisky)}
+.cards time{display:block;margin:12px 0 4px;font-size:13px;color:var(--stone);letter-spacing:.04em}.cards .ct{display:block;font-family:var(--serif);font-weight:500;font-size:16px;line-height:1.55}
 .event{border:1px solid var(--line);background:var(--paper);margin-top:26px}.event img{display:block;width:100%;height:auto;aspect-ratio:1600/837;background:#1a1714}
 .ev-body{padding:26px 28px 28px}.ev-body h3{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:.03em;margin:0 0 12px;line-height:1.45}.ev-body>p{margin:0 0 18px}
 .lineup-h{font-family:var(--display);font-style:italic;color:var(--whisky);font-size:17px;margin:24px 0 6px}.lg{margin:14px 0 4px;font-size:13px;color:var(--stone);letter-spacing:.04em}
@@ -1303,7 +1323,10 @@ h1.page{font-family:var(--serif);font-size:clamp(30px,4.6vw,44px);letter-spacing
 @media (max-width:900px){.hero-mark{width:84px}.mast{grid-template-columns:1fr;gap:28px;padding:40px 0 34px}.mast-r{align-items:flex-start;text-align:left}
 .split{grid-template-columns:1fr;gap:22px}.grid3{grid-template-columns:repeat(2,minmax(0,1fr))}
 .grid3 article:nth-child(3n){border-right:1px solid var(--line)}.grid3 article:nth-child(2n){border-right:0}.grid3 article:nth-last-child(-n+3){border-bottom:1px solid var(--line)}.grid3 article:nth-last-child(-n+2){border-bottom:0}}
-@media (max-width:600px){.ev-body{padding:20px 18px 22px}.hero-mark{display:none}.nav{order:3;flex-basis:100%;justify-content:flex-start;gap:2px 18px}.langs{order:2}
+@media (max-width:600px){.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px 14px}.cards .ct{font-size:15px}
+.cards.scroll{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;margin-right:calc(-1*max(5vw,18px));padding-right:max(5vw,18px);scrollbar-width:none}.cards.scroll::-webkit-scrollbar{display:none}
+.cards.scroll li{flex:0 0 68%;scroll-snap-align:start}
+.ev-body{padding:20px 18px 22px}.hero-mark{display:none}.nav{order:3;flex-basis:100%;justify-content:flex-start;gap:2px 18px}.langs{order:2}
 .grid3{grid-template-columns:1fr}.grid3 article{border-right:0!important;border-bottom:1px solid var(--line)!important}.grid3 article:last-child{border-bottom:0!important}
 .facts{grid-template-columns:1fr}.info>div{grid-template-columns:1fr;gap:2px}details p{padding-left:0}.plate svg{aspect-ratio:4/3}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
